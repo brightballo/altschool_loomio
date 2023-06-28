@@ -1,0 +1,37 @@
+test:
+  service: Disk
+  root: <%= Rails.root.join("tmp/storage") %>
+
+local:
+  service: Disk
+  root: <%= Rails.root.join("storage") %>
+
+amazon:
+  service: S3
+  access_key_id: <%= ENV['AWS_ACCESS_KEY_ID'] %>
+  secret_access_key: <%= ENV['AWS_SECRET_ACCESS_KEY'] %>
+  bucket: <%= ENV['AWS_BUCKET'] %>
+  region: <%= ENV['AWS_REGION'] %>
+
+digitalocean:
+  service: S3
+  endpoint: <%= ENV['DO_ENDPOINT'] %>
+  access_key_id: <%= ENV['DO_ACCESS_KEY_ID'] %>
+  secret_access_key: <%= ENV['DO_SECRET_ACCESS_KEY'] %>
+  bucket: <%= ENV['DO_BUCKET'] %>
+  region: ignored
+
+s3_compatible:
+  service: S3
+  endpoint: <%= ENV.fetch('STORAGE_ENDPOINT', '') %>
+  access_key_id: <%= ENV.fetch('STORAGE_ACCESS_KEY_ID', '') %>
+  secret_access_key: <%= ENV.fetch('STORAGE_SECRET_ACCESS_KEY', '') %>
+  region: <%= ENV.fetch('STORAGE_REGION', '') %>
+  bucket: <%= ENV.fetch('STORAGE_BUCKET_NAME', '') %>
+  force_path_style: <%= ENV.fetch('STORAGE_FORCE_PATH_STYLE', false) %>
+
+google:
+  service: GCS
+  credentials: <%= ENV.fetch('GCS_CREDENTIALS', '') %>
+  project: <%= ENV.fetch('GCS_PROJECT', '') %>
+  bucket: <%= ENV.fetch('GCS_BUCKET', '') %>

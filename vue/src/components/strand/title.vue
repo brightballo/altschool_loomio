@@ -1,0 +1,25 @@
+<script lang="coffee">
+import ThreadService  from '@/shared/services/thread_service'
+import { map, compact, pick } from 'lodash'
+import EventBus from '@/shared/services/event_bus'
+import openModal      from '@/shared/helpers/open_modal'
+
+export default
+  props:
+    discussion: Object
+
+  computed:
+
+    status: ->
+      return 'pinned' if @discussion.pinned
+
+</script>
+
+<template lang="pug">
+.thread-title
+  h1.text-h4.context-panel__heading#sequence-0.py-3(tabindex="-1" v-observe-visibility="{callback: titleVisible}")
+    span(v-if='!discussion.translation.title') {{discussion.title}}
+    span(v-if='discussion.translation.title')
+      translation(:model='discussion', field='title')
+    i.mdi.mdi-pin-outline.context-panel__heading-pin(v-if="status == 'pinned'")
+</template>

@@ -1,0 +1,42 @@
+sv:
+  errors:
+    404:
+      title: Inte hittad
+  group:
+    stats:
+      members: Medlemmar
+      threads: Trådar
+      poll_types:
+        proposal: Förslag
+        time: Tidsröstning
+  poll:
+    export:
+      title: Titel
+      author: Författare
+      email: Email
+      details: Detaljer
+      total: Totalt
+  email:
+    reset_password:
+      link_text: Återställ ditt lösenord
+    by_who: av %{person}
+    reply_to_this_discussion: Svara på denna diskussion
+    unsubscribe: 'Avregistrera dig eller ändra dina e-postinställningar:'
+    unsubscribe_html: "<a href='%{link_path}'>%{link_text}</a> för att avregistrera eller ändra dina emailinställnignar."
+    catch_up:
+      mark_as_read: Markera som läst
+      thanks_for_reading: Tack för läsning, ha en bra dag!
+      marked_as_read_success: Allt från mail har markerats som läst
+      click_here: Klicka här
+    membership_request:
+      subject: "%{who} har begärt att få gå med %{which_group}"
+      view_group: Du kan godkänna eller avslå begäran här
+  footer:
+    about: Om
+    blog: Blogg
+    contact: Kontakt
+    help: Hjälp
+    privacy: Sekretesspolicy
+    pricing: Prissättning
+    public_groups: Öppna grupper
+    terms: Villkor

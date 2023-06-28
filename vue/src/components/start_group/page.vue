@@ -1,0 +1,22 @@
+<script lang="coffee">
+import Records       from '@/shared/services/records'
+import EventBus      from '@/shared/services/event_bus'
+import LmoUrlService from '@/shared/services/lmo_url_service'
+import AuthModalMixin  from '@/mixins/auth_modal'
+import Session from '@/shared/services/session'
+
+import _isEmpty     from 'lodash/isEmpty'
+
+export default
+  mixins: [AuthModalMixin]
+  data: ->
+    group: Records.groups.build()
+  mounted: ->
+    @openAuthModal() unless Session.isSignedIn()
+</script>
+
+<template lang="pug">
+v-main
+  v-container.max-width-800.start-group-page.px-0.px-sm-3
+    group-new-form(:group="group")
+</template>

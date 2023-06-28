@@ -1,0 +1,130 @@
+class UserMailer < BaseMailer
+  def email_to_group_address(group_id, user_id)
+    @user = User.find(user_id)
+    @group = @user.groups.find(group_id)
+    send_single_mail to: @user.email,
+                     subject_key: "email_to_group_mailer.your_email_address_to_start_threads_in_group",
+                     subject_params: { group:@group.full_name, site_name: AppConfig.theme[:site_name] },
+                     locale: @user.locale
+  end
+
+  def deactivated(email, recovery_code, locale)
+    @recovery_code = recovery_code
+    send_single_mail to: email,
+                     subject_key: "user_mailer.deactivated.subject",
+                     subject_params: { site_name: AppConfig.theme[:site_name] },
+                     locale: locale
+  end
+
+  def accounts_merged(user_id)
+    @user = User.find(user_id)
+    @token = @user.login_tokens.create!
+    send_single_mail to: @user.email,
+                     subject_key: "user_mailer.accounts_merged.subject",
+                     subject_params: { site_name: AppConfig.theme[:site_name] },
+                     locale: @user.locale
+  end
+
+  def merge_verification(source_user:, target_user:, hash:)
+    @source_user = source_user
+    @target_user = target_user
+    @hash = hash
+    send_single_mail to: @target_user.email,
+                     subject_key: "user_mailer.merge_verification.subject",
+                     subject_params: {site_name: AppConfig.theme[:site_name]},
+                     locale: @target_user.locale
+  end
+
+  def catch_up(user_id, time_since = nil, frequency = 'daily')
+    user = User.find(user_id)
+    return unless user.email_catch_up_day
+    @current_user = @recipient = @user = user
+
+    if frequency == 'daily'
+      @time_start = time_since || 24.hours.ago
+    elsif frequency == 'other'
+      @time_start = time_since || 48.hours.ago
+    else
+      @time_start = time_since || 1.week.ago
+    end
+    
+    @time_finish = Time.zone.now
+    @time_frame = @time_start...@time_finish
+
+    @discussions = DiscussionQuery.visible_to(
+      user: user,
+      only_unread: true,
+      or_public: false,
+      or_subgroups: false).last_activity_after(@time_start)
+    @groups = @user.groups.order(full_name: :asc)
+
+    @cache = RecordCache.for_collection(@discussions, user_id)
+
+    @subject_key = "email.catch_up.#{frequency}_subject"
+    @subject_params = { site_name: AppConfig.theme[:site_name] }
+
+    unless @discussions.empty? or @user.groups.empty?
+      @discussions_by_group_id = @discussions.group_by(&:group_id)
+      send_single_mail to: @user.email,
+                       subject_key: @subject_key,
+                       subject_params: @subject_params,
+                       locale: @user.locale
+    end
+  end
+
+  def membership_request_approved(recipient_id, event_id)
+    @user = User.find_by(id: recipient_id)
+    @group = Event.find_by(id: event_id).eventable.group
+
+    send_single_mail to: @user.email,
+                     reply_to: @group.admin_email,
+                     subject_key: "email.group_membership_approved.subject",
+                     subject_params: {group_name: @group.full_name},
+                     locale: @user.locale
+  end
+
+  def user_added_to_group(recipient_id, event_id)
+    @user    = User.find_by!(id: recipient_id)
+    event = Event.find_by!(id: event_id)
+    @group   = event.eventable.group
+    @inviter = event.eventable.inviter || @group.admins.first
+
+    send_single_mail to: @user.email,
+                     from: from_user_via_loomio(@inviter),
+                     reply_to: @inviter.try(:name_and_email),
+                     subject_key: "email.user_added_to_group.subject",
+                     subject_params: { which_group: @group.full_name, who: @inviter.name, site_name: AppConfig.theme[:site_name] },
+                     locale: [@user.locale, @inviter.locale]
+  end
+
+  def group_export_ready(recipient_id, group_name, document_id)
+    @user     = User.find(recipient_id)
+    @document = Document.find(document_id)
+    send_single_mail to: @user.email,
+                     subject_key: "user_mailer.group_export_ready.subject",
+                     subject_params: {group_name: group_name},
+                     locale: @user.locale
+  end
+
+  def login(user_id, token_id)
+    @user = User.find_by!(id: user_id)
+    @token = LoginToken.find_by!(id: token_id)
+    send_single_mail to: @user.email,
+                     subject_key: "email.login.subject",
+                     subject_params: {site_name: AppConfig.theme[:site_name]},
+                     locale: @user.locale
+  end
+
+  def contact_request(contact_request:)
+    @contact_request = contact_request
+
+    send_single_mail to: @contact_request.recipient.email,
+                     from: from_user_via_loomio(@contact_request.sender),
+                     reply_to: @contact_request.sender.name_and_email,
+                     subject_key: "email.contact_request.subject",
+                     subject_params: { name: @contact_request.sender.name,
+                                       site_name: AppConfig.theme[:site_name]},
+                     locale: [@contact_request.recipient.locale, @contact_request.sender.locale]
+  end
+
+end

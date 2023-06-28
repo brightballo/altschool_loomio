@@ -1,0 +1,23 @@
+default:
+  - slight_smile
+  - heart
+  - thumbsup
+  - thumbsdown
+  - ok_hand
+  - fingers_crossed
+  - raised_hands
+  - pray
+  - wave
+  - clap
+  - laughing
+  - hugging
+  - sunglasses
+  - nerd
+  - thinking
+  - relieved
+  - astonished
+  - slight_frown
+  - confused
+  # - disappointed
+  # - angry
+  - cry

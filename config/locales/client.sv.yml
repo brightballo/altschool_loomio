@@ -1,0 +1,420 @@
+sv:
+  templates:
+    try_loomio: Prova Loomio
+  doctypes:
+    youtube_video: YouTubevideo
+    image: Bild
+    pdf: PDF
+    document: Dokument
+  current_plan_button:
+    upgrade: Uppgradera
+  subscription_status:
+    members: "Medlemmar"
+  loomio_tags:
+    name_label: Namn
+  timezones:
+    local: Lokal tid ({{value}})
+  common:
+    please_wait: Vänlig vänta
+    version: Version
+    or: eller
+    you: Du
+    expand: Expandera
+    all_day: Hela dagen
+    ok_got_it: Ok, förstår
+    learn_more: Lär dig mer
+    not_found: Inte hittad
+    time_zone: Tidszon
+    local_time: Lokal tid
+    confirm_discard_changes: Kasta bort dina ändringar?
+    time:
+      am: förmiddag
+      pm: eftermiddag
+    closing_in: 'Stänger {{time}}'
+    closed_ago: 'Stängd {{time}}'
+    volume: 'Volym'
+    notification_volume: 'Notifieringsvolym'
+    group: 'Grupp'
+    groups: 'Grupper'
+    threads: 'Trådar'
+    decisions: 'Beslut'
+    settings: 'Inställningar'
+    help: 'Hjälp'
+    anonymous: Anonym
+    email_address: Emailadress
+    privacy:
+      privacy: 'Integritet'
+      public: 'Offentlig'
+      open: 'Öppen'
+      closed: 'Stängd'
+      private: 'Privat'
+      secret: 'Hemlig'
+    selected: 'Vald'
+    date_range:
+      today: 'I dag'
+      yesterday: 'Igår'
+      thisweek: 'Denna Vecka'
+      thismonth: 'Denna Månad'
+      older: 'Äldre'
+    more_help: 'Mer hjälp'
+    copy: 'Kopiera'
+    copy_text: 'Kopiera text'
+    copied: 'Kopierad till urklipp'
+    points_abbrev: Varje röst är värd {{score}} poäng
+    total: Totalt
+    action:
+      search: 'Sök'
+      back: 'Tillbaka'
+      next: 'Nästa'
+      close: 'Stäng'
+      reopen: 'Öppna igen'
+      save: 'Spara'
+      save_changes: 'Spara ändringar'
+      update_settings: 'Uppdatera inställningar'
+      reply: 'Svara'
+      edit: 'Redigera'
+      remove: 'Ta bort'
+      like: 'Gilla'
+      unlike: 'Sluta gilla'
+      update: 'Uppdatera'
+      cancel: 'Ångra'
+      show_more: "Visa mer"
+      view_all: "Visa Alla"
+      new_thread: "Ny tråd"
+      loading: 'Laddar'
+      translate: 'Översätt'
+      upload: 'Ladda upp'
+      uploading: 'Laddar upp'
+      load_more: 'Ladda fler'
+      share: Dela
+      ok: Ok
+      retry: Försök igen
+      clear: Klar
+      done: Klar
+      start: Starta
+      delete: Radera
+      unsubscribe: Sluta prenumerera
+      subscribe: Prenumerera
+      remind: Påminn
+      resend: Skicka igen
+      send: Skicka
+      joined: Gick med
+      last_seen: Senast sedd
+      invite: Bjud in
+      resent: Inbjudan skickad igen
+      export: Exportera
+      fork: Gaffel
+    formatting_help:
+      label: 'Utformning'
+      title: 'Lär dig hur du använder Märkspråk för att formatera din text'
+  merge_accounts:
+    modal:
+      submit: Verifiera
+  emoji_picker:
+    search: Sök
+    people: Människor
+  ordinal:
+    _1: 1:a
+    _2: 2:a
+    _3: 3:e
+    _4: 4:e
+    _5: 5:e
+    _6: 6:e
+    _7: 7:e
+    _8: 8:e
+    _9: 9:e
+    _10: 10:e
+  devise:
+    sessions:
+      signed_up: Registreringen lyckades!
+    failure:
+      inactive: 'Det är ett deaktiverat konto associerat med denna e-postadress. Om du vill återaktivera ditt konto, kontakta oss.'
+  error_page:
+    forbidden: 'Du saknar behörighet att göra detta.'
+    page_not_found: 'Vi kunde inte hitta det. Det kan ha blivit raderat eller flyttat.'
+    internal_server_error: 'Vi är ledsna, men något gick fel. Var god försök igen.'
+  verify_email_notice:
+    please_verify: Tack för att du deltar! Vänligen kolla din e-post efter en länk för att verifiera din röst.
+  previous_polls_page:
+    heading: Aktiviter i {{name}}
+    polls_count: Visar {{loaded}} av {{total}} beslut
+    search_activities: Sök beslut
+  volume_levels:
+    loud: 'Ljud'
+    normal: 'Normal'
+    quiet: 'Tyst'
+    mute: 'Tysta ned'
+    unmute: 'Ta bort nedtystning'
+  pin_event_form:
+    title_label: Titel
+  change_volume_form:
+    simple:
+      label: Notifieringar
+      normal: Normal
+      quiet: Ignorera
+    aria_label: "Byt epostinställningars formulär"
+    loud_label: "All aktivitet"
+    normal_label: "Meddelanden"
+    quiet_label: "Inga e-post"
+    mute_label: "Tysta ned"
+    discussion:
+      apply_to_all: "Tillämpa dessa inställningar på alla trådar i denna grupp."
+      messages:
+        loud: "Du kommer att få e-post om aktivitet i denna tråd."
+        normal: "Du kommer att få e-post om förslag i denna tråd."
+        quiet: "Du kommer inte få e-post om denna tråd."
+    membership:
+      loud_description: "Du kommer att få e-post vid aktivitet i denna grupp."
+      normal_description: "Du kommer att få e-post vid aktivitet i denna grupp."
+      quiet_description: "Du kommer inte få e-post om aktivitet i denna grupp."
+      apply_to_all: "Tillämpa dessa inställningar i alla mina grupper."
+      messages:
+        loud: "Du kommer få e-post om alla aktiviteter i denna grupp. "
+        normal: "Du kommer bara få e-post vid meddelanden i denna grupp."
+        quiet: "Du kommer inte bli mailad om den här grupp."
+    all_groups:
+      loud_description: "Du kommer att bli mailad om alla aktivitetera i alla dina grupper"
+      messages:
+        loud: "Du kommer att bli mailad om alla aktivitetera i alla dina grupper"
+        normal: "Du kommer endast att bli mailade meddelanden i alla dina grupper."
+        quiet: "Du kommer inte att mailas om någon av dina grupper."
+    user:
+      title: E-post inställningar för nya grupper
+      loud_description: "Du kommer bli mailad när det finns aktiviteter i nya grupper du går med."
+      normal_description: "Du kommer bli mailad om meddelanden i nya grupper du går med."
+      quiet_description: "Du kommer inte bli mailad om aktivitet i några nya grupper du går med."
+      apply_to_all: "Tillämpa dessa inställningar i alla mina grupper."
+      messages:
+        loud: "Du kommer att mailas alla aktiviteter i nya grupper."
+        normal: "Du kommer bli mailad om meddelande i nya grupper."
+        quiet: "Du kommer inte bli mailad om nya grupper."
+  close_explanation_modal:
+    aria_label: Stäng tråd
+    close_thread: Stäng tråd
+    image_alt: Stänger alla trådar
+  inbox:
+    clear: 'Klar'
+    latest: 'Senaste'
+    unread: 'Olästa'
+    closing_in: 'Stänger'
+  sign_up_form:
+    password_label: 'Lösenord:'
+    password_confirmation_label: 'Återupprepa lösenord:'
+  signed_out_modal:
+    aria_label: 'Sessionen avslutad'
+    title: "Din session är avslutad"
+    message: "Du har loggats ut från ett annat fönster. Var god logga in igen för att fortsätta."
+    ok: "Ok"
+  comment_reply_form:
+    aria_label: 'Lägg till svar'
+  comment_form:
+    aria_label: 'Lägg till kommentar'
+    attachments:
+      add_attachment: 'Bifoga fil'
+      remove_attachment: 'Ta bort bifogning'
+    messages:
+      created: 'Kommentar tillagd'
+      replied: '{{name}} har notfierats angående svar'
+      updated: 'Kommentar uppdaterad'
+      destroyed: 'Kommentar borttagen'
+    say_something: Säg något...
+    edit_comment: 'Edit kommentar'
+    delete_comment: 'Ta bort kommentaren'
+    cancel_reply: 'Ångra svar'
+    confirm_delete_message: 'Är du säker på att du vill ta bort denna kommentaren?'
+    confirm_delete: 'Ta bort kommentar'
+    in_reply_to: "Svara till {{name}} "
+    write_a_comment: "Skriv en kommentar..."
+    post_comment: "Skicka kommentar"
+    submit_button:
+      label: 'Lägg upp'
+    private_privacy_notice: 'Din kommentar kommer bara vara synlig för medlemmar av {{groupName}}.'
+    public_privacy_notice: 'Din kommentar kommer att vara synlig för alla på nätet.'
+    sign_in: "Logga in för att delta i konversationen"
+  sidebar:
+    threads: 'Trådar'
+    recent_threads: 'Senaste trådarna'
+    muted_threads: 'Stumma trådar'
+    explore: 'Publika grupper'
+    start_thread: Ny tråd
+    start_decision: Nytt beslut
+    aria_labels:
+      heading: 'Sidomeny'
+  navbar:
+    recent_title: 'Gå till instrumentbrädan'
+    start_thread: 'Ny tråd'
+    search:
+      placeholder: 'Sök'
+      discussions: 'Diskussioner'
+    logo_title: 'Hemsida'
+  membership_dropdown:
+    invitation_resent: "Inbjudan skickad igen"
+  notifications:
+    header: "Notifieringar"
+  discussion_form:
+    invite: Bjud in
+    group_label: 'Grupp'
+    title_label: 'Titel'
+    context_label: 'Kontext'
+    privacy_label: 'Sekretesspolicy'
+  announcement:
+    form:
+      invitation_message_label: Meddelande
+      poll_reminder:
+        message_label: Meddelande
+      wip_poll_reminder:
+        message_label: Meddelande
+  action_dock:
+    delete_comment: Ta bort kommentar
+    edited: Redigerad
+    close_thread: Stäng tråd
+  formatting:
+    attach: Bifoga fil
+  join_group_button:
+    join_group: Bli medlem i gruppen
+    membership_requested: Förfrågan om medlemskap
+  membership_request_form:
+    heading: Be att få gå med
+    name_label: Namn
+    email_label: Email
+  revision_history_modal:
+    current_revision: Senaste
+  reactions_display:
+    you: "Du"
+  context_panel:
+    thread_status:
+      closed: "Denna tråd är stängd. Den kommer inte längre att visas på instrumentbrädan, tråden kommer också vara listad som 'stängd' på gruppsidan."
+  group_page:
+    threads: Trådar
+    members: Medlemmar
+    settings: Inställningar
+    invite_people: 'Bjud in'
+    options_label: 'Alternativ'
+    options:
+      label: 'Alternativ'
+      edit_group: 'Redigera gruppinställningarna'
+      email_settings: 'E-postinställningar'
+      leave_group: 'Lämna gruppen'
+    volume:
+      quiet: Skicka mig inte epost om den här gruppen. Aktivitet kommer att visas på instrumentbrädan.
+      quiet_aria_description: Din notifikationsvolym för den här gruppen är satt till Tyst. Du kommer inta att få epost om aktivitet i den här gruppen. Grupp aktivitet kommer att visas på din instrumentbräda.
+      mute: Göm denna grupp från instrumentbrädan och notifiera mig inte om jag inte är @omnämnd.
+      mute_aria_description: Din notifikationsvolym för den här gruppen är satt till Stum. Du kommer inte att få epost om inte någon specifikt vidnämner dig och grupp aktivitet kommer inte att visas på din instrumentbräda.
+      mute_message: '"{{name}}" har tagits bort från din instrumentbräda.'
+  group_form:
+    new_group: Ny grupp
+    group_name: Gruppnamn
+    group_name_placeholder: 'Vad heter din grupp?'
+    privacy: 'Integritet'
+    profile: Profil
+    submit_start_group: 'Startgrupp'
+    submit_update: 'Uppdatera inställningar'
+  membership_requests_page:
+    approve: Godkänn
+    ignore: Ignorera
+  invitation_form:
+    invite_people: 'Bjud in deltagare'
+    copy_link: 'Kopiera'
+    send: 'Skicka'
+    done: 'Klar'
+  memberships_page:
+    members: 'Medlemmar'
+    name_label: 'Namn'
+    remove_member_label: 'Ta bort'
+  profile_page:
+    profile: 'Profil'
+    picture_label: 'Bild'
+    name_label: 'Namn'
+    username_label: 'Användarnamn'
+    email_label: 'Email'
+    locale_label: 'Språk'
+  change_picture_form:
+    use_gravatar: 'Använd Gravatar'
+  email_settings_page:
+    monday: Måndag
+    tuesday: Tisdag
+    wednesday: Onsdag
+    thursday: Torsdag
+    friday: Fredag
+    saturday: Lördag
+    sunday: Söndag
+    announcement_label: Meddelanden
+  dashboard_page:
+    aria_label: 'Instrumentbräda'
+    recent_threads: "Senaste trådarna"
+    mark_as_read: Markera som läst
+    filtering:
+      dropdown_heading: Filtrera instrumentbrädan.
+    threads_from:
+      today: 'I dag'
+      yesterday: 'Igår'
+  inbox_page:
+    no_groups:
+      start: Starta
+      or: eller
+  activity_card:
+    latest: Senaste
+    context: Kontext
+  thread_group:
+    aria_label: Gruppnamn
+  thread_context:
+    close_thread: 'Stäng'
+    reopen_thread: 'Öppna igen'
+    mute_thread: 'Tysta ned'
+    delete_thread: 'Radera'
+  delete_comment_dialog:
+    title: 'Ta bort kommentaren'
+  contact_message_form:
+    name_label: 'Ditt namn'
+    subject_label: "Ämne"
+    email_label: 'Din emailadress'
+    message_label: 'Ditt meddelande'
+  decision_tools_card:
+    proposal_title: Förslag
+    poll_title: Undersökning
+    score_title: Ränka röster
+    meeting_title: Tidsröstning
+    ranked_choice_title: Valfritt val
+  poll_common:
+    have_your_say: Gör din röst hörd
+    save_changes: Spara
+  discussions_panel:
+    open: Öppen
+    all: Alla
+    closed: Stängd
+  members_panel:
+    order_by_name: 'Namn'
+    header_name: 'Namn'
+    header_username: 'Användarnamn'
+    accepted: 'Medlemmar'
+  polls_panel:
+    all: 'Alla'
+    open: 'Öppen'
+    closed: 'Stängd'
+  poll_common_form:
+    voting_methods:
+      ranked_choice: Valfritt val
+      time_poll: Tidsröstning
+    closed: Stängd
+    start: Starta
+  poll_proposal_options:
+    'yes': 'Ja'
+    'no': 'Nej'
+  poll_count_options:
+    'yes': 'Ja'
+    'no': 'Nej'
+  poll_meeting_chart_panel:
+    total: Totalt
+  poll_remove_vote:
+    success: Röst borttagen
+  auth_form:
+    name_placeholder: Ditt namn
+  chatbot:
+    username: Användarnamn
+    password: Lösenord
+  webhook:
+    name_label: Namn
+  group_survey:
+    categories:
+      community: Gemenskap grupp
+      other: Andra

@@ -1,0 +1,459 @@
+el:
+  templates:
+    try_loomio: Δοκιμάστε το Loomio
+  plan_names:
+    free: Δωρεάν
+    pro: Επαγγελματικό
+  current_plan_button:
+    upgrade: Αναβάθμιση
+  subscription_status:
+    members: "Μέλη"
+  loomio_tags:
+    name_label: Όνομα
+  timezones:
+    local: Τοπική ώρα ({{value}})
+  common:
+    please_wait: Παρακαλούμε περιμένετε
+    version: Έκδοση
+    or: ή
+    expand: Επέκταση
+    all_day: Όλη μέρα
+    ok_got_it: Εντάξει, το κατάλαβα
+    learn_more: Μάθε περισσότερα
+    not_found: Δεν βρέθηκε
+    time_zone: Ώρα ζώνης
+    local_time: Τοπική ώρα
+    confirm_discard_changes: Απορρίψτε τις αλλαγές σας;
+    time:
+      am: π.μ.
+      pm: μ.μ.
+    closing_in: 'Κλείνει {{time}}'
+    closed_ago: 'Έκλεισε {{time}}'
+    volume: 'Ένταση'
+    notification_volume: 'Ένταση ειδοποιήσεων'
+    group: 'Ομάδα'
+    groups: 'Ομάδες'
+    threads: 'Θέματα'
+    decisions: 'Αποφάσεις'
+    settings: 'Ρυθμίσεις'
+    help: 'Βοήθεια'
+    email_address: Ηλεκτρονική διεύθυνση
+    privacy:
+      privacy: 'Ιδιωτικότητα'
+      public: 'Δημόσιο'
+      open: 'Άνοιγμα'
+      closed: 'Έκλεισε'
+      private: 'Ιδιωτικό'
+      secret: 'Κρυφό'
+    selected: 'Επιλεγμένα'
+    date_range:
+      today: 'Σήμερα'
+      yesterday: 'Εχθές'
+      thisweek: 'Αυτή την εβδομάδα'
+      thismonth: 'Αυτό το μήνα'
+      older: 'Παλιότερα'
+    more_help: 'Περισσότερη βοήθεια'
+    copy: 'Αντιγραφή'
+    copy_text: 'Αντιγραφή κειμένου'
+    copied: 'Αντιγράφηκε στο πρόχειρο'
+    action:
+      print: Εκτύπωση
+      search: 'Εύρεση'
+      back: 'Πίσω'
+      next: 'Επόμενο'
+      close: 'Κλείσε'
+      save: 'Αποθήκευση'
+      save_changes: 'Αποθήκευση αλλαγών'
+      update_settings: 'Ενημέρωση ρυθμίσεων'
+      reply: 'Απάντηση'
+      edit: 'Επεξεργασία'
+      remove: 'Αφαίρεση'
+      like: 'Αρέσει'
+      unlike: 'Δεν μ''άρέσει'
+      update: 'Ενημέρωση'
+      cancel: 'Ακύρωση'
+      show_more: "Δείξε περισσότερα"
+      view_all: "Εμφάνιση όλων"
+      new_thread: "Νέο θέμα"
+      loading: 'Φορτώνει'
+      translate: 'Μετάφραση'
+      upload: 'Ανέβασμα'
+      uploading: 'Φορτώνει'
+      load_more: 'Φόρτωση περισσότερα'
+      share: Μοίρασμα
+      ok: Εντάξει
+      retry: Ξαναδοκιμάστε
+      clear: Καθάρισμα
+      done: Έγινε
+      start: Εκίνηση
+      delete: Διαγραφή
+      unsubscribe: Κατάργηση εγγραφής
+      subscribe: Εγγραφή
+      invite: Πρόσκληση
+    formatting_help:
+      label: 'Μορφοποίηση'
+  emoji_picker:
+    search: Εύρεση
+  devise:
+    failure:
+      inactive: 'Υπάρχει ανενεργός λογαριασμός συνδεδεμένος με αυτή την ηλεκτρονική διεύθυνση. Εάν θέλετε να ξανά-ενεργοποιήσετε τον λογαριασμό σας, επικοινωνήστε μαζί μας.'
+  error_page:
+    forbidden: 'Δεν έχετε το δικαίωμα για να το κάνετε αυτό.'
+    page_not_found: 'Ήταν αδύνατον να βρούμε αυτό. Πιθανώς έχει διαγραφεί ή μετακινηθεί.'
+    internal_server_error: 'Συγνώμη, αλλά κάτι πήγε λάθος. Παρακαλούμε προσπαθήστε ξανά.'
+  previous_polls_page:
+    heading: Δραστηρίοτητες στο {{name}}
+    polls_count: Βλέπετε {{loaded}} των {{total}} αποφάσεων
+    search_activities: Ψάξτε αποφάσεις
+  volume_levels:
+    loud: 'Δυνατά'
+    normal: 'Κανονικά'
+    quiet: 'Ήσυχα'
+    mute: 'Σίγαση'
+    unmute: 'Κατάργηση σίγασης'
+  pin_event_form:
+    title_label: Τίτλος
+  change_volume_form:
+    simple:
+      label: Ειδοποιήσεις
+      normal: Κανονικά
+      quiet: Αγνοήστε
+    aria_label: "Αλλαγή ρυθμίσεων ηλεκτρονικής διεύθυνσης φόρμας"
+    loud_label: "Όλες οι δραστηριότητες"
+    normal_label: "Ανακοινώσεις"
+    quiet_label: "Όχι emails"
+    mute_label: "Σίγαση"
+    discussion:
+      apply_to_all: "Εφαρμόστε αυτές τις ρυθμίσεις σε όλα τα θέματα σε αυτή την ομάδα."
+      messages:
+        loud: "Θα σας έρχετε ηλεκτρονικό μήνυμα για την δραστηριότητα σε αυτό το θέμα."
+        normal: "Θα σας έρχετε ηλεκτρονικό μήνυμα σχετικά με τις προτάσεις σε αυτό το θέμα."
+        quiet: "Δεν θα σας έρχεται ηλεκτρονικό μήνυμα σχετικά με αυτό το θέμα."
+    membership:
+      loud_description: "Θα σας έρχεται ηλεκτρονικό μήνυμα όται υπάρχει δραστηριότητα σε αυτή την ομάδα."
+      normal_description: "Θα σας έρχεται ηλεκτρονικό μήνυμα όται υπάρχει δραστηριότητα σε αυτή την ομάδα."
+      quiet_description: "Δεν θα σας έρχονται ηλεκτρονικά μηνύματα σχετικά με την δραστηριότητα σε αυτή την ομάδα."
+      apply_to_all: "Εφαρμόστε αυτές τις ρυθμίσεις σε όλες τις ομάδες μου."
+      messages:
+        loud: "Θα σας έρχονται ηλεκτρονικά μηνύματα με όλη την δραστηριότητα σε αυτή την ομάδα."
+        normal: "Θα σας έρχεται ηλεκτρονικό μήνυμα μόνο με τις ανακοινώσεις σε αυτή την ομάδα."
+        quiet: "Δεν θα σας έρχονται ηλεκτρονικά μηνύματα σχετικά με αυτή την ομάδα."
+    all_groups:
+      loud_description: "Θα σας έρχονται ηλεκτρονικά μηνύματα με όλη την δραστηριότητα σε όλες τις ομάδες σας."
+      messages:
+        loud: "Θα σας έρχονται ηλεκτρονικά μηνύματα με όλη την δραστηριότητα σε όλες τις ομάδες σας."
+        normal: "Θα σας έρχονται ηλεκτρονικά μηνύματα μόνο με τις ανακοινώσεις σε όλες τις ομάδες σας."
+        quiet: "Δεν θα σας έρχεται κανένα ηλεκτρονικό μήνυμα σε καμία από τις ομάδες σας."
+    user:
+      title: Ρυθμίσεις ηλεκτρονικών μηνυμάτων για νέες ομάδες
+      apply_to_all: "Εφαρμόστε αυτές τις ρυθμίσεις σε όλες τις ομάδες μου."
+  inbox:
+    clear: 'Καθάρισμα'
+    latest: 'Τελευταία'
+    unread: 'Αδιάβαστα'
+    closing_in: 'Κλείνει'
+  sign_up_form:
+    password_label: 'Κωδικός:'
+    password_confirmation_label: 'Ξανά τον ίδιο κωδικό:'
+  signed_out_modal:
+    aria_label: 'Η σύνοδος έληξε'
+    title: "Η σύνοδος σας έληξε"
+    ok: "Εντάξει"
+  comment_form:
+    aria_label: 'Πρόσθεσε ένα σχόλιο'
+    attachments:
+      add_attachment: 'Επισυνάψτε αρχείο'
+      remove_attachment: 'Αφαίρεσε συννημένο'
+    messages:
+      created: 'Το σχόλιο προστέθηκε'
+      replied: '{{name}} ειδοποιήθηκε για την απάντηση'
+      updated: 'Σχόλιο ανανεώθηκε'
+      destroyed: 'Σχόλιο διαγράφτηκε'
+    edit_comment: 'Επεξεργασία σχόλιου'
+    delete_comment: 'Διαγραφή σχόλιου'
+    cancel_reply: 'Ακύρωση Απάντησης'
+    confirm_delete_message: 'Είστε σίγουροι ότι θέλετε να διαγράψετε αυτό το σχόλιο?'
+    confirm_delete: 'Διαγραφή σχολίου'
+    post_comment: "Δημοσίευση σχόλιου"
+    submit_button:
+      label: 'Δημοσίευση'
+    private_privacy_notice: 'Το σχόλιο σας θα είναι ορατό μόνο στα μέλη της ομάδα {{groupName}}.'
+    public_privacy_notice: 'Το σχόλιο σας θα είναι ορατό σε όλους στο διαδίκτυο.'
+    sign_in: "Εισέλθετε για να συμμετάσχετε στην συζήτηση"
+  sidebar:
+    threads: 'Θέματα'
+    recent_threads: 'Πρόσφατα θέματα'
+    muted_threads: 'Θέματα σε σίγαση'
+    explore: 'Δημόσιες ομάδες'
+    start_thread: Νέο θέμα
+    start_decision: Νέα απόφαση
+    aria_labels:
+      heading: 'Πλευρική στήλη'
+      threads_list: 'Ενέργειες θεμάτων'
+      groups_list: 'Ομάδες'
+      user_list: 'Ενέργειες χρήστη'
+  navbar:
+    recent_title: 'Πήγαινε στον πίνακα διαχείρισης'
+    unread_title: 'Δες την αδιάβαστη δραστηριότητα'
+    start_thread: 'Νέο θέμα'
+    notifications: 'Πίνακας ειδοποιήσεων'
+    search:
+      label: 'Πεδίο εύρεσης; ψάξτε για ομάδες και θέματα'
+      results_aria_label: 'Αποτελέσματα εύρεσης'
+      no_results: 'Δεν βρέθηκαν θέματα'
+      close: 'Κλείσε τον πίνακα εύρεσης'
+      placeholder: 'Εύρεση'
+      loading: 'Φορτώνει αποτελέσματα...'
+      discussions: 'Θέματα'
+      proposals: 'Προτάσεις'
+      comments: 'Σχόλια'
+    sign_in: 'Είσοδος'
+    toggle_sidebar: 'Εναλλαγή πλευρικής στήλης'
+    logo_title: 'Κεντρική σελίδα'
+  membership_dropdown:
+    make_coordinator: 'Κάντε τον/την διαχειριστή'
+  notifications:
+    header: "Ειδοποιήσεις"
+    no_notifications: "Δεν έχετε καμία ειδοποίηση"
+  discussion_form:
+    invite: Πρόσκληση
+    aria_label: 'Φόρμα θέματος'
+    start_thread: Ξεκινήστε ένα θέμα
+    messages:
+      created: 'Το θέμα ξεκίνησε'
+      updated: 'Το θέμα ανανεώθηκε'
+    new_discussion_title: 'Ξεκινήστε ένα νέο θέμα'
+    edit_discussion_title: 'Επεξεργασία θέματος'
+    group_label: 'Ομάδα'
+    group_placeholder: 'Διαλέξτε μια ομάδα'
+    title_label: 'Τίτλος'
+    title_placeholder: 'Ποιο είναι το θέμα που θέλετε να συζητήσετε;'
+    context_label: 'Περιεχόμενο'
+    privacy_label: 'Απόρρητο'
+    privacy_public: 'Οποιοσδήποτε μπορεί να δει αυτό το θέμα. Μόνο μέλη μπορούν να συμμετάσχουν.'
+    privacy_private: 'Το θέμα θα είναι ορατό μόνο στα μέλη της ομάδας {{group}}.'
+    privacy_organisation: 'Το θέμα θα είναι ορατό μόνο στα μέλη της {{parent}} και μέλη της ομάδα {{group}}.'
+  announcement:
+    form:
+      invitation_message_label: Μήνυμα
+      poll_reminder:
+        message_label: Μήνυμα
+      wip_poll_reminder:
+        message_label: Μήνυμα
+  action_dock:
+    edit_stance: Αλλάξε θέση
+    edited: Επεξεργάστηκε
+    count_members: "%{count} μέλη "
+  formatting:
+    attach: Επισυνάψτε αρχείο
+  cover_photo_form:
+    heading: 'Νέα φωτογραφία εξωφύλλου'
+    upload_link: 'Ανεβάστε νέα φωτογραφία εξωφύλλου'
+    image_size_helptext: 'Το καταλληλότερο μέγεθος εικόνας είναι 1400×320px'
+    upload_success: 'Η φωτογραφία εξωφύλλου ανανεώθηκε επιτυχώς'
+  logo_photo_form:
+    heading: 'Νέο λογότυπο ομάδας'
+    upload_link: 'Ανεβάστε νέο λογότυπο ομάδας'
+    image_size_helptext: 'Ιδανικό μέγεθος είναι 100×100px'
+    upload_success: 'Το λογότυπο ανανεώθηκε επιτυχώς'
+  join_group_button:
+    join_group: Συμμετάσχετε στην ομάδα
+    membership_requested: Αίτηση μέλους έχει ζητηθεί.
+    messages:
+      joined_group: 'Τώρα είστε μέλος της ομάδας {{group}}'
+  membership_request_form:
+    aria_label: Φόρμα αιτήματος μέλους
+    heading: Δηλώστε συμμετοχή στην ομάδα
+    name_label: Όνομα
+    email_label: Ηλεκτρονική Διεύθυνση
+    introduction_label: Γιατί θέλετε να συμμετάσχετε;
+    submit_button: Ρωτήστε για να συμμετάσχετε
+    introduction_over_limit: Η απάντηση είναι πολύ μεγάλη
+  revision_history_modal:
+    aria_label: Αναθεώρηση ιστορικού
+    started_by: 'Ξεκίνησε από <strong>{{name}}</strong>'
+    edited_by: 'Επεξεργάστηκε από <strong>{{name}}</strong>'
+    posted: Δημοσιεύθηκε
+    current_revision: Τελευταία
+  group_page:
+    threads: Θέματα
+    members: Μέλη
+    settings: Ρυθμίσεις
+    subgroups: Υποομάδες
+    messages:
+      archive_group_success: 'Αυτή η ομάδα έχει απενεργοποιηθεί'
+    group_logo: 'Λογότυπο ομάδας'
+    new_photo: 'Νέα φωτογραφία'
+    new_cover_photo: 'Ανεβάστε νέα φωτογραφία εξωφύλλου'
+    new_group_logo: 'Ανεβάστε νέο λογότυπο ομάδας'
+    discussions_placeholder: 'Ένα νήμα είναι όπου όλοι μπορούν να συζητήσουν ένα θέμα και να πάρουν αποφάσεις μαζί.'
+    members_placeholder: 'Είστε ο μοναδικός εδώ: προσκαλέστε κάποια άτομα να συμμετάσχουν μαζί σας!'
+    member_options: Επιλογές μέλους
+    invite_people: 'Πρόσκληση'
+    visibility_label: 'Ορατότητα'
+    options_label: 'Ρυθμίσεις'
+    options:
+      label: 'Ρυθμίσεις'
+      edit_group: 'Επεξεργαστείτε τις ρυθμίσεις της ομάδας'
+      manage_members: 'Διαχείριση μελών'
+      add_subgroup: 'Προσθέστε υποομάδα'
+      email_settings: 'Προτιμήσεις Ηλεκτρονικού Ταχυδρομείου'
+      leave_group: 'Φύγετε από την ομάδα '
+      deactivate_group: 'Απενεργοποίηση ομάδας'
+    volume:
+      loud: Αποστολή ηλεκτρονικού μηνύματος όποτε υπάρχει δραστηριότητα.
+      quiet: Μην στείλετε ηλεκτρονικό μήνυμα για αυτή την ομάδα. Η δραστηριότητα θα εμφανιστεί στο ταμπλό.
+      mute: Απόκρυψη αυτής της ομάδας από το ταμπλό και καμμία ειδοποιήση εκτός εάν @αναφερθώ.
+  description_card:
+    title: 'Περιγραφή ομάδας'
+    messages:
+      description_updated: 'Η περιγραφή ανανεώθηκε'
+  leave_group_form:
+    aria_label: 'Φύγετε από την ομάδα'
+    title: 'Φύγετε από την ομάδα '
+    question: 'Είστε σίγουροι ότι θέλετε να φύγετε από την ομάδα;'
+    submit: 'Ναι, φύγετε από την ομάδα'
+  archive_group_form:
+    aria_label: 'Απενεργοποίηση ομάδας'
+    title: 'Απενεργοποίηση ομάδας'
+    question: 'Είστε σίγουροι ότι θέλετε να απενεργοποίησετε την ομάδα;'
+    submit: 'Ναι, απενεργοποίηστε την ομάδα'
+  group_form:
+    aria_label: Φόρμα ομάδας
+    new_group: Νέα ομάδα
+    start_group_heading: Ξεκινήστε μια ομάδα
+    start_subgroup_heading: Ξεκινήστε μια υπό ομάδα
+    edit_group_heading: Επεξεργαστείτε τις ρυθμίσεις της ομάδας
+    edit_subgroup_heading: Επεξεργαστείτε τις ρυθμίσεις της υπο ομάδας
+    group_settings: Ρυθμίσεις ομάδας
+    group_name: Όνομα ομάδας
+    group_name_placeholder: 'Ποιο είναι το όνομα της ομάδα σας?'
+    description: 'Περιγραφή'
+    description_placeholder: 'Περιγράψτε τον σκοπό της ομάδας σας, ώστε τα μέλη της ομάδας σας να γνωρίζουν γιατί είναι εδώ.'
+    privacy_statement:
+      private_to_group: 'Το όνομα και η περιγραφή θα είναι ορατά μόνο στα μέλη.'
+      private_to_parent_members: 'Το όνομα και η περιγραφή θα είναι ορατά μόνο στα μέλη του {{parent}}'
+    privacy: 'Ιδιωτικότητα'
+    profile: Προφίλ
+    permissions: 'Δικαιώματα'
+    thread_privacy: 'Ιδιωτικότητα του θέματος'
+    public_threads: 'Μόνο δημόσια θέματα'
+    public_discussions_subgroup: 'Οποιοσδήποτε στο {{parentGroupName}} μπορεί να δει τις συζητήσεις'
+    public_or_private_threads: 'Επιτρέπονται δημόσια και ιδιωτικά θέματα'
+    private_threads: 'Μόνο τα μέλη μπορούν να δεις τις συζητήσεις'
+    allow_public_threads: 'Επιτρέπονται δημόσια θέματα σε αυτή την ομάδα.'
+    submit_start_group: 'Δημιουργία ομάδας'
+    submit_start_subgroup: 'Δημιουργία υπο ομάδας'
+    submit_update: 'Ενημέρωση ρυθμίσεων'
+    messages:
+      group_created: 'Η ομάδα ξεκίνησε'
+      group_updated: 'Η ομάδα ενημερώθηκε'
+  membership_requests_card:
+    heading: 'Αιτήσεις εγγραφής μελών'
+    manage_requests: Διαχείριση αιτήσεων
+  membership_requests_page:
+    heading: Αιτήσεις εγγραφής μελών
+    approve: Έγκριση
+    ignore: Αγνοήστε
+  invitation_form:
+    invite_people: 'Προσκαλέστε άτομα'
+    copy_link: 'Αντιγραφή'
+    done: 'Έγινε'
+  memberships_page:
+    members: 'Μέλη'
+    name_label: 'Όνομα'
+    remove_member_label: 'Αφαιρέστε'
+  profile_page:
+    profile: 'Προφίλ'
+    picture_label: 'Εικόνα'
+    name_label: 'Όνομα'
+    username_label: 'Όνομα χρήστη'
+    email_label: 'Ηλεκτρονική Διεύθυνση'
+    locale_label: 'Γλώσσα'
+  change_picture_form:
+    use_gravatar: 'Χρησιμοποιήστε Gravatar'
+  email_settings_page:
+    monday: Δευτέρα
+    tuesday: Τρίτη
+    wednesday: Τετάρτη
+    thursday: Πέμπτη
+    friday: Παρασκευή
+    saturday: Σάββατο
+    sunday: Κυριακή
+    announcement_label: Ανακοινώσεις
+  dashboard_page:
+    aria_label: 'Πίνακας Εργαλείων'
+    recent_threads: "Πρόσφατα θέματα"
+    mark_as_read: Σημείωσε ως διαβασμένα
+    filtering:
+      proposals: Προτάσεις
+    threads_from:
+      today: 'Σήμερα'
+      yesterday: 'Εχθές'
+  inbox_page:
+    no_groups:
+      start: Εκίνηση
+      or: ή
+  discussion:
+    started_by: 'Ξεκίνησε από τον/την <strong>{{name}}</strong>'
+  activity_card:
+    latest: Τελευταία
+    context: Περιεχόμενο
+  thread_group:
+    aria_label: Όνομα ομάδας
+  thread_context:
+    close_thread: 'Κλείσε'
+    mute_thread: 'Σίγαση'
+    delete_thread: 'Διαγραφή'
+  delete_comment_dialog:
+    title: 'Διαγραφή σχόλιου'
+  contact_message_form:
+    name_label: 'Το όνομα σας'
+    subject_label: "Θέμα"
+    email_label: 'Η Ηλεκτρονική Διεύθυνση σας'
+    message_label: 'Το μήνυμα σας'
+  decision_tools_card:
+    proposal_title: Πρόταση
+    poll_title: Ψηφοφορία
+    meeting_title: Χρόνος ψηφοφορίας
+  poll_common:
+    have_your_say: Πείτε την γνώμη σας
+    save_changes: Αποθήκευση
+  discussions_panel:
+    open: Άνοιγμα
+    all: Όλα
+    closed: Έκλεισε
+  members_panel:
+    everyone: 'Όλοι'
+    order_by_name: 'Όνομα'
+    header_name: 'Όνομα'
+    header_username: 'Όνομα χρήστη'
+    accepted: 'Μέλη'
+  polls_panel:
+    all: 'Όλα'
+    open: 'Άνοιγμα'
+    closed: 'Έκλεισε'
+  poll_common_form:
+    voting_methods:
+      time_poll: Χρόνος ψηφοφορίας
+    closed: Έκλεισε
+    start: Εκίνηση
+  poll_proposal_options:
+    'yes': 'Ναι'
+    'no': 'Όχι'
+  poll_count_options:
+    decline: Απόρριψη
+    'yes': 'Ναι'
+    'no': 'Όχι'
+  auth_form:
+    email_placeholder: you@example.com
+    name_placeholder: Το όνομα σας
+  chatbot:
+    username: Όνομα χρήστη
+    password: Κωδικός
+  webhook:
+    name_label: Όνομα
+  group_survey:
+    categories:
+      community: Ομάδα Κοινότητας
+      other: Άλλο

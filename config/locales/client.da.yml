@@ -1,0 +1,761 @@
+da:
+  templates:
+    try_loomio: Prøv Loomio
+  loomio_onboarding:
+    group_progress_card:
+      activities:
+        make_decision: Opret en beslutning
+  plan_names:
+    free: Gratis
+    pro: Pro
+  subscription_status:
+    members: "Medlemmer"
+  loomio_tags:
+    name_label: Navn
+    color_label: Farve
+    modal_title: Opret nyt mærke
+    modal_edit_title: Rediger mærke
+    modal_destroy_title: Slet mærke
+  timezones:
+    local: Lokal tid ({{value}})
+  common:
+    please_wait: Vent venligst
+    version: Version
+    no_results_found: Ingen resultater fundet
+    or: eller
+    expand: Udvid
+    all_day: Hele dagen
+    ok_got_it: Ok
+    learn_more: Se mere
+    not_found: Ingen resultater fundet
+    time_zone: Tidszone
+    local_time: Lokal tid
+    attachments: Vedhæftede filer
+    confirm_discard_changes: Fortryd dine ændringer
+    time:
+      am: am
+      pm: pm
+    closing_in: 'Lukker {{time}}'
+    closed_ago: 'Lukket {{time}}'
+    volume: 'Lydstyrke'
+    notification_volume: 'Mængde af beskeder'
+    group: 'Gruppe'
+    groups: 'Grupper'
+    threads: 'Debatter'
+    decisions: 'Beslutninger'
+    settings: 'Indstillinger'
+    help: 'Hjælp'
+    email_address: Emailadresse
+    privacy:
+      privacy: 'Privatindstilliger'
+      public: 'Offentlig'
+      open: 'Offentlig'
+      closed: 'Lukket'
+      private: 'Privat'
+      secret: 'Hemmelig'
+    selected: 'Valgt(e)'
+    date_range:
+      today: 'I dag'
+      yesterday: 'I går'
+      thisweek: 'I denne uge'
+      thismonth: 'I denne måned'
+      older: 'Ældre'
+    more_help: 'Mere hjælp'
+    copy: 'Kopier'
+    copy_text: 'Kopier tekst'
+    copied: 'Kopieret til clipboard'
+    action:
+      print: Print
+      search: 'Søg'
+      back: 'Tilbage'
+      next: 'Næste'
+      close: 'Luk'
+      save: 'Gem'
+      move: 'Flyt'
+      save_changes: 'Gem ændringer'
+      update_settings: 'Opdater indstillinger'
+      reply: 'Svar'
+      edit: 'Rediger'
+      remove: 'Slet'
+      like: 'Synes om'
+      unlike: 'Synes ikke om'
+      update: 'Opdater'
+      cancel: 'Annuller'
+      show_more: "Vis mere"
+      view_all: "Se alle"
+      new_thread: "Ny tråd"
+      loading: 'Indlæser'
+      translate: 'Oversæt'
+      upload: 'Upload'
+      uploading: 'Uploader'
+      load_more: 'Hent mere'
+      share: Del
+      ok: Ok
+      retry: Forsøg igen
+      clear: Ryd
+      done: Færdig
+      start: Start
+      delete: Slet
+      unsubscribe: Afmeld
+      subscribe: Abonnér
+      invite: Inviter
+    formatting_help:
+      label: 'Formatering'
+  emoji_picker:
+    search: Søg
+  devise:
+    failure:
+      inactive: 'Der er en deaktiveret konto tilknyttet til denne emailadresse. Hvis du ønsker at aktivere din konto, kontakt os.'
+  error_page:
+    forbidden: 'Du har ikke adgang til at gøre dette.'
+    page_not_found: 'Vi kunne ikke finde det du bad om. Måske er det blevet slettet eller flyttet,'
+    internal_server_error: 'Noget gik desværre galt. Prøv igen.'
+  previous_polls_page:
+    heading: Aktiviteter i {{name}}
+    polls_count: Viser {{loaded}} af {{total}} aktiviteter
+    search_activities: Søg aktiviteter
+  volume_levels:
+    loud: 'Høj'
+    normal: 'Normal'
+    quiet: 'Lav'
+    mute: 'Slået fra'
+    unmute: 'Slået til'
+  pin_event_form:
+    title_label: Titel
+  change_volume_form:
+    simple:
+      label: Notifikationer
+      normal: Normal
+      quiet: Ignorér
+    aria_label: "Rediger emailindstillinger"
+    loud_label: "Al aktivitet"
+    normal_label: "Normal"
+    quiet_label: "Ingen emails"
+    mute_label: "Slå fra"
+    discussion:
+      apply_to_all: "Gem disse indstillinger for alle debatter i denne gruppe."
+      messages:
+        loud: "Du vil få emails ved enhver aktivitet i denne debat."
+        normal: "Du vil få email ved forslag i denne debat."
+        quiet: "Du vil ikke få emails ved aktivitet i denne debat."
+    membership:
+      loud_description: "Du vil modtage en email hver gang der er aktivitet i denne gruppe."
+      normal_description: "Du vil modtage en email hver gang der er aktivitet i denne gruppe."
+      quiet_description: "Du vil ikke modtage emails ved nogen aktivitet i denne gruppe."
+      apply_to_all: "Gem disse indstillinger for all mine grupper."
+      messages:
+        loud: "Du vil få emails ved enhver aktivitet i denne gruppe."
+        normal: "Du vil få emails ved publiceringer i denne gruppe."
+        quiet: "Du vil ikke få emails ved nogen aktivitet i denne gruppe."
+    all_groups:
+      loud_description: "Du vil få emails ved enhver aktivitet i alle dine grupper."
+      messages:
+        loud: "Du vil få emails ved enhver aktivitet i alle dine grupper."
+        normal: "Du vil få emails ved publiceringer i alle dine grupper."
+        quiet: "Du vil ikke få emails ved nogen aktivitet i ngoen af dine grupper."
+    user:
+      title: Emailindstillinger for nye grupper
+      loud_description: "Du vil modtage en email hver gang der er aktivitet i nye grupper du bliver medlem af."
+      normal_description: "Du vil modtage en email hver ved publiceringer i nye grupper du bliver medlem af.."
+      quiet_description: "Du vil ikke få emails ved nogen aktivitet i nye grupper du bliver medlem af."
+      apply_to_all: "Gem disse indstillinger for all mine grupper."
+      messages:
+        loud: "Du vil få emails ved enhver aktivitet i alle nye grupper du bliver medlem af."
+        normal: "Du vil få emails ved publiceringer i alle nye grupper du bliver medlem af."
+        quiet: "Du vil ikke få emails ved nogen aktivitet i nogen af de nye fupper du bliver medlem af."
+  inbox:
+    clear: 'Ryd'
+    latest: 'Seneste'
+    unread: 'Ulæst'
+    closing_in: 'Ved at lukke'
+  sign_up_form:
+    password_label: 'Adgangskode:'
+    password_confirmation_label: 'Gentag adgangskode:'
+  signed_out_modal:
+    aria_label: 'Logget ud'
+    title: "Du er nu logget ud"
+    ok: "Ok"
+  comment_form:
+    aria_label: 'Tilføj en kommentar'
+    attachments:
+      add_attachment: 'Vedhæft fil'
+      remove_attachment: 'Slet vedhæftning'
+    messages:
+      created: 'Kommentar tilføjet'
+      replied: '{{name}} er notificeret om svar'
+      updated: 'Kommentar redigeret'
+      destroyed: 'Kommentar slette'
+    edit_comment: 'Rediger kommentar'
+    delete_comment: 'Slet kommentar'
+    cancel_reply: 'Fortryd svar'
+    confirm_delete_message: 'Er du sikker på at du vil slette denne kommentar?'
+    confirm_delete: 'Slet kommentar'
+    post_comment: "Indsend kommentar"
+    submit_button:
+      label: 'Gem'
+    private_privacy_notice: 'Din kommentar til kun være synlig for medlemmer af {{groupName}}.'
+    public_privacy_notice: 'Din kommentar til kun være synlig for all på internettet.'
+    sign_in: "Log ind for at deltage i debatten"
+  sidebar:
+    threads: 'Debatter'
+    recent_threads: 'Seneste debatter'
+    muted_threads: 'Uden notifikationer'
+    explore: 'Offentlige grupper'
+    start_thread: Opret debat
+    start_decision: Opret stillingtagen
+    aria_labels:
+      heading: 'Menu'
+      threads_list: 'Debat handlinger'
+      groups_list: 'Grupper'
+      user_list: 'Bruger handlinger'
+  strand_nav:
+    newest_first: Nyeste først
+    oldest_first: Ældste først
+  navbar:
+    recent_title: 'Vis dashboard'
+    unread_title: 'Vis ulæste aktiviteter'
+    start_thread: 'Opret debat'
+    notifications: 'Notifikations panel'
+    search:
+      label: 'Søg; søg i grupper og debatter'
+      results_aria_label: 'Søgeresultat'
+      no_results: 'Ingen debatter fundet'
+      close: 'Luk søge panel'
+      placeholder: 'Søg'
+      loading: 'Henter resultater...'
+      discussions: 'Debatter'
+      proposals: 'Forslag'
+      comments: 'Kommentarer'
+    sign_in: 'Log ind'
+    toggle_sidebar: 'Vis/skjul menu'
+    logo_title: 'Hjem'
+  membership_dropdown:
+    cancel_invitation: Fortryd invitation
+  notifications:
+    header: "Notifikationer"
+    no_notifications: "Du har ikke nogen notifikationer"
+  discussion_fork_actions:
+    move: Flyt
+  discussion_form:
+    invite: Inviter
+    aria_label: 'Debat'
+    messages:
+      created: 'Debat oprettet'
+      updated: 'Debat redigeret'
+    new_discussion_title: 'Opret ny debat'
+    edit_discussion_title: 'Rediger debat'
+    group_label: 'Gruppe'
+    group_placeholder: 'Vælg en gruppe'
+    title_label: 'Titel'
+    title_placeholder: 'Hvilket emne ønsker du at have en debat om?'
+    context_label: 'Beskrivelse'
+    privacy_label: 'Privatinstillinger'
+    privacy_public: 'Alle kan se debatten. Kun medlemmer kan deltage.'
+    privacy_private: 'Debatten kan kun ses af medlemmer af gruppen {{group}}.'
+    privacy_organisation: 'Debatten kan ses af medlemmer af gruppen {{parent}} og af medlemmer af gruppen {{group}}.'
+  announcement:
+    form:
+      invitation_message_label: Besked
+      poll_reminder:
+        message_label: Besked
+      wip_poll_reminder:
+        message_label: Besked
+      outcome_announced:
+        title: Del resultat
+      anyone_can_participate: Alle kan deltage
+  action_dock:
+    edit_stance: Rediger stillingtagen
+    edited: Redigeret
+    delete_thread: Slet debat
+  formatting:
+    attach: Vedhæft fil
+  cover_photo_form:
+    heading: 'Nyt forsidefoto'
+    upload_link: 'Upload er nyt forsidefoto'
+    image_size_helptext: 'Ideel billedstørrelse er 1400x320px'
+    upload_success: 'Forside foto gemt'
+  logo_photo_form:
+    heading: 'Nyt gruppelogo'
+    upload_link: 'Upload nyt gruppelogo'
+    image_size_helptext: 'Ideel  billedstørrelse er 100x100px'
+    upload_success: 'Gruppelogo gemt'
+  join_group_button:
+    join_group: Bliv medlem
+    membership_requested: Anmodet om medlemsskab
+    messages:
+      joined_group: 'Du er nu medlem af {{group}}'
+  membership_request_form:
+    aria_label: Anmod om at blive medlem
+    heading: Anmod om at blive medlem
+    name_label: Nan
+    email_label: Email
+    introduction_label: Hvorfor vil du være medlem?
+    submit_button: Anmod om medlemskab
+    introduction_over_limit: Din introduktion er for lang
+  revision_history_modal:
+    aria_label: Versionshistorik
+    started_by: 'Oprette af <strong>{{name}}</strong>'
+    edited_by: 'Redigeret af <strong>{{name}}</strong>'
+    posted: Gemt
+    current_revision: Seneste
+  group_page:
+    threads: Debatter
+    members: Medlemmer
+    settings: Indstillinger
+    subgroups: Undergrupper
+    messages:
+      privacy:
+        members: 'Denne gruppe er nu kun synlig for medlemmer'
+        public: 'Denne gruppe er ny synlig for offentligheden'
+      leave_group_success: 'Du har forladt denne gruppe'
+      archive_group_success: 'Denne gruppe er deaktiveret'
+    group_logo: 'Gruppelogo'
+    new_photo: 'Nyt photo'
+    new_cover_photo: 'Upload nyt forsidebillede'
+    new_group_logo: 'Upload nyt gruppelogo'
+    discussions_placeholder: 'En debat er et sted hvor alle kan give deres mening til kende omkring et specifikt emne og tage beslutninger sammen.'
+    members_placeholder: 'Du er det eneste medlem her, inviter nogle mennesker til at være med!'
+    member_options: Medlemsinstaillinger
+    invite_people: 'Inviter'
+    visibility_label: 'Visibility'
+    options_label: 'Indstillinger'
+    options:
+      label: 'Indstillinger'
+      edit_group: 'Rediger gruppe indstillinger'
+      manage_members: 'Administrer medlemmer'
+      add_subgroup: 'Opret undergruppe'
+      email_settings: 'E-mail-indstillinger'
+      leave_group: 'Forlad gruppe'
+      deactivate_group: 'Deaktiver gruppe'
+    volume:
+      loud: Email ved enhver aktivitet.
+      loud_aria_description: Din notifikations volume er sat til høj. Du vil modtage email ved enhver aktivitet i denne gruppe.
+      loud_message: Du vil modtage email ved enhver aktivitet i "{{name}}."
+      normal: 'Email kun ved vigtige hændelser: ved nye debatter, forslag og resultater osv.'
+      normal_aria_description: Din email notifikations volume for denne gruppe er sat til normal. Du vil kun modtage email ved vigtige hændelser, så som ved oprettelse af en ny debat , opretter et forslag eller sætter et resultat
+      normal_message: 'Du vil kun modtage email ved vigtige hændelser i "{{name}}".'
+      quiet: Send ikke emails fra denne gruppe. Aktivitet vil blive vist på dashboardet.
+      quiet_aria_description: Din notifikations volume er sat til lav. Du vil ikke modtage email om aktivitet der sker i denne gruppe. Gruppens aktivitet vil blive vist på dit Dashboard.
+      quiet_message: 'You won''t be emailed about activity in "{{name}}".'
+      mute: Skjul denne gruppe fra dahsboardet og unlad at notificer med mindre at @mentioned.
+      mute_aria_description: Dint notifikations volume for denne gruppe er sat til lydløs. Du vil ikke modtage email med mindre at nogen @mentions dig, og gruppens aktivitet vil ikke blive vist på dit dashboard.
+      mute_message: '"{{name}}" er fjernet fra dit dashboard.'
+    privacy:
+      private: 'Privatinstillinger: Denne gruppe er kun synlig for medlemmer'
+      parent_members: 'Privatinstillinger: Denne gruppe er synlig for medlemmer af {{parentGroupName}} og medlemmer af {{groupName}}'
+      public: 'Privatinstillinger: Denne gruppe er synlig for alle på internettet'
+      aria_label: 'Privatinstillinger: {{privacy}}'
+  description_card:
+    title: 'Gruppe beskrivelse'
+    messages:
+      description_updated: 'Beskrivelse gemt'
+  leave_group_form:
+    aria_label: 'Forlad gruppe'
+    title: 'Forlad gruppe'
+    question: 'Er du sikker på at du vil forlade denne gruppe?'
+    submit: 'Ja, forlad denne gruppe'
+  archive_group_form:
+    aria_label: 'Deaktiver gruppe'
+    title: 'Deaktiver gruppe'
+    question: 'Er du sikker på at du vil deaktivere denne gruppe?'
+    submit: 'Ja, deaktiver denne gruppe'
+  group_form:
+    aria_label: Gruppe formular
+    new_group: Ny gruppe
+    start_group_heading: Opret en gruppe
+    start_subgroup_heading: Opret en undergruppe
+    edit_group_heading: Rediger gruppe indstillinger
+    edit_subgroup_heading: Rediger undergruppe indstillinger
+    group_name: Gruppenavn
+    group_name_placeholder: 'Hvad er navnet på din gruppe?'
+    description: 'Beskrivelse'
+    description_placeholder: 'Beskriv formålet med denne  gruppe så at gruppens medlemmer ved hvorfor de er her.'
+    privacy_statement:
+      private_to_group: 'Navn og beskrivelse er kun tilgængelige for medlemmer.'
+      private_to_parent_members: 'Navn og beskrivelse er kun tilgængelige for medlemmer af {{parent}}'
+    privacy: 'Privatindstillinger'
+    confirm_change_to_secret: "Hvis du fortsætter så vil alle debatter i denne gruppe og undergrupper være private."
+    confirm_change_to_secret_subgroup: 'vis du fortsætter så vil alle debatter i denne gruppe være private.'
+    confirm_change_to_public: 'Hvis du fortsætter så vil alle debatter i denne gruppe være offentlige (alle på internettet kan læse dem).'
+    confirm_change_to_private_discussions_only: 'Hvis du fortsætter så vil alle offentlige debatter i denne gruppe blive lavet om til private debatter.'
+    profile: Profil
+    subgroup_privacy_is_open_description: "Alle kan finde undergruppen og anmode om at blive medlem. Det er kun medlemmer der kan se hvem der er medlem i undergruppen. Alle debatter er offentlige (alle på internettet kan læse dem)."
+    subgroup_privacy_is_closed_description: "Alle kan finde undergruppen og anmode om at blive medlem. Det er kun medlemmer der kan se hvem der er medlem i undergruppen. Alle debatter er private."
+    subgroup_privacy_is_closed_public_threads_description: "Alle kan finde undergruppen og anmode om at blive medlem. Det er kun medlemmer der kan se hvem der er medlem i undergruppen.  Debatter kan være offentlige eller private."
+    subgroup_privacy_is_closed_secret_parent_description: "Medlemmer af {{parent}} kan finde denne undergruppe og anmode om at blive medlem. Alle debatter er private. Det er kun medlemmer der kan se hvem der er medlem i gruppen."
+    subgroup_privacy_is_secret_description: 'Det er kun inviterede medlemmer der kan finde undergruppen, se hvem der er medlem og se debatter.'
+    advanced_settings: "Avancerede indstillinger"
+    how_do_people_join: "Hvordan bliver man medlem?"
+    membership_granted_upon_request: 'Alle kan blive medlem'
+    membership_granted_upon_approval: 'Alle kan anmode om at blive medlem, men skal godkendes.'
+    membership_granted_upon_approval_secret_parent: '<strong>På anmodning</strong> så kan alle fra {{parent}} anmode om at blive medlem af gruppen.'
+    permissions: 'Rettigheder'
+    thread_privacy: 'Debat privatindstillinger'
+    public_threads: 'Kun offentlige debatter'
+    public_discussions_subgroup: 'Alle i {{parentGroupName}} kan læse debatter'
+    public_or_private_threads: 'Tillad både offentlige og private debatter'
+    private_threads: 'Det er kun medlemmer der kan se debatter'
+    allow_public_threads: 'Tillad offentlige debatter i denne gruppe.'
+    submit_start_group: 'Opret gruppe'
+    submit_start_subgroup: 'Opret undergruppe'
+    submit_update: 'Gem indstillinger'
+    messages:
+      group_created: 'Gruppe oprettet'
+      group_updated: 'Gruppe gemt'
+  membership_requests_card:
+    heading: 'Anmodninger om medlemskab'
+    manage_requests: Administrer anmodninger
+  membership_requests_page:
+    heading: Anmodninger om medlemskab
+    approve: Godkend
+    ignore: Ignorér
+    no_pending_requests: Der er pt. ingen anmodninger om at blive medlem i denne gruppe.
+    no_previous_requests: Der er pt. ingen tidligere anmodninger om at blive medlem i denne gruppe.
+    previous_requests: Tidligere anmodninger
+    previous_request_response: '{{response}} af {{responder}} '
+    messages:
+      request_approved_success: Andmodning om medlemskab godkendt
+      request_ignored_success: Andmodning om medlemskab ignoréret
+  invitation_form:
+    aria_label: 'Invitation form'
+    invite_people: 'Inviter folk'
+    group: 'Gruppe'
+    group_placeholder: 'Vælg en gruppe'
+    shareable_link: 'Delbart link'
+    copy_link: 'Kopier'
+    email_addresses: 'Emailadresser'
+    email_addresses_placeholder: 'f.eks. helperbot@loomio.org, friendlybot@loomio.org'
+    add_custom_message: 'Gør din invitation personlig, '
+    add_custom_message_link: 'skriv en personlig besked.'
+    custom_message: 'Personlig besked'
+    custom_message_placeholder: 'Indtast en personlig besked som bliver sendt med invitationen.'
+    add_members: 'Tilføj medlemmer'
+    from_parent_group: 'fra {{name}}.'
+    send: 'Send'
+    done: 'Udført'
+    messages:
+      invitation_sent: 'Invitation sendt.'
+      no_invitations: 'Uha! Kontroller venligst at emailadressen er korrekt og prøv igen.'
+      max_invitations: 'Hvis du ønsker at sende mere end 100 invitationer, så benyt et delbart link.'
+  memberships_page:
+    members: 'Medlemmer'
+    name_label: 'Navn'
+    remove_member_label: 'Slet'
+    fragment_placeholder: 'Filtrer brugere på navn eller brugernavn...'
+    messages:
+      remove_member_success: '{{name}} slettet'
+  membership_remove_modal:
+    invitation:
+      title: Fortryd invitation
+      flash: Invitation fortrudt
+      submit: Fortryd invitation
+    membership:
+      title: Slet medlem
+      submit: Slet medlem
+  profile_page:
+    messages:
+      updated: 'Profile gemt'
+      picture_changed: 'Profile billeder gemt'
+      password_changed: 'Adgangskode gemt'
+      deactivated: 'Konto deaktiveret'
+    change_picture_link: 'Rediger billede'
+    change_password_link: 'Skift adgangskode'
+    profile: 'Profil'
+    edit_profile: 'Rediger Profil'
+    picture_label: 'Billede'
+    name_label: 'Navn'
+    username_label: 'Brugernavn'
+    email_label: 'Email'
+    locale_label: 'Sprog'
+    update_profile: 'Gem profil'
+  change_picture_form:
+    helptext: 'Du kan oploade dit eget profil billede, eller hvis du har en <a href="https://en.gravatar.com/support/whatisgravatar/">Gravatar</a> konto, så kan den bruges.'
+    use_initials: 'Benyt initialer'
+    use_gravatar: 'Brug Gravatar'
+  deactivation_modal:
+    name_removed: 'Kommentarer, forslag og debatter som du har lavet vil forblive men dit navn vil blive fjernet fra dem'
+    no_longer_group_member: 'Du vil ikke længere bliver vist som medlem i nogen grupper'
+  email_settings_page:
+    monday: Mandag
+    tuesday: Tirsdag
+    wednesday: Onsdag
+    thursday: Torsdag
+    friday: Fredag
+    saturday: Lørdag
+    sunday: Søndag
+    on_participation_label: Abonnér ved deltagelse
+    on_participation_description: "Når du deltager i en debat, så vil all fremtidig aktivitet i denne debat bliver emailet til dig med det samme."
+    announcement_label: Normal
+    update_settings: Gem ændringer
+    specific_groups: Indstillinger for specifikke grupper
+    default_settings:
+      loud_description: "When you join a new group, you will be emailed <strong>whenever there is activity</strong>."
+      normal_description: "When you join a new group, you will be emailed about <strong>new threads and proposals</strong>."
+      quiet_description: "When you join a new group, you <strong>won't be emailed about activity</strong>."
+    edit: Rediger
+    messages:
+      updated: Emailindstillinger gemt
+  dashboard_page:
+    aria_label: 'Dashboard'
+    recent_threads: "Seneste debatter"
+    no_groups:
+      show_muted: Du har ikke nogen debatter uden notifikationer da du ikke er medlem af nogen grupper.
+    no_threads:
+      show_all: Du har ikke nogen seneste debatter.
+      show_proposals: Der er pt. ikke nogen aktive forslag.
+      show_muted: Du har ikke nogen debatter uden notifikationer.
+    view_recent: Vis alle seneste debatter?
+    load_more: Hent flere debatter
+    mark_as_read: Marker som læst
+    dismiss: Dismiss
+    explain_mute:
+      title: Det har ikke slået notifikationer fra på nogen debatter endnu.
+      explanation_html: |
+          At slå notifikationer fra på en debat er en måde at skjule debatter på
+          At slå notifikationer fra på en debat betyder at du ikke vil se debatten under <strong>Seneste</strong> eller <strong>Ulæste</strong>, og du vil ikke modtage notifikationer om aktivitet i deb debat, f.eks. så som forslag.
+          Du vil kun modtage en notifikation hvis nogen <strong>@mentions</strong> dit navn.
+      instructions: 'For at slå notifikationer fra for en debat, hold musen henover debatten og klik på "lydløs" ikonet.'
+      see_muted_html: 'For at se dine debatter hvor notifikationer er slået fra, klik <strong>"Uden notifikationer"</strong>. Du kan slå notifikationer til ved at holde musen henover debatten og klik på det samme ikon.'
+    filtering:
+      filter_threads: Filtrer debatter
+      filter_threads_aria_label: Filtrer debatter
+      dropdown_heading: Filtrer dashboard
+      all: Seneste debatter
+      all_aria_label: Viser pt. seneste debatter
+      all_description: Vis seneste debatter
+      proposals: Forslag
+      proposals_aria_label: Viser pt. debatter med aktive forslag
+      proposals_description: Vis kun debatter med aktive forslag
+      muted_aria_label: Viser pt. debatter uden notifikationer
+      muted_description: Vis kun debatter uden notifikationer
+    thread_preview:
+      you_voted: 'Du stemte {{position}}'
+      undecided: 'De har ikke stemt'
+    threads_from:
+      group: 'Debatter fra'
+      starred: 'Stjernemarkerede debatter'
+      today: 'I dag'
+      yesterday: 'I går'
+      thisweek: 'Denne uge'
+      thismonth: 'Denne måned'
+      older: 'Ældre end en måned'
+  inbox_page:
+    no_threads: Woohoo! Du har læst alle dine debatindlæg i din indbox.
+    unread_threads: Ulæste debatter
+    view_more: Vis mere
+    no_groups:
+      explanation: YDu har ikke nogen ulæste debatter da du ikke er medlem af nogle grupper.
+      start: Opret
+      or: eller
+      join_group: <a href="/explore">bliv medlem</a> af en gruppe for at se debatter.
+  discussion:
+    activity: 'Aktivitet'
+    activity_placeholder: 'Ingen aktivitet endnu!'
+    load_previous: 'Hent tidligere aktivitet'
+    started_by: 'Oprettet af <strong>{{name}}</strong>'
+    volume:
+      unmute_message: 'Notifikationer slået til.'
+  activity_card:
+    latest: Seneste
+    context: Beskrivelse
+    attachment_display:
+      aria_label: 'Fil vedhæftet:'
+      image_alt: 'Vedhæftet billede'
+    comment: Kommenter
+  thread_group:
+    aria_label: Gruppenavn
+  thread_context:
+    aria_label: 'Debat beskrivelse'
+    thread_options: 'Debatindstillinger'
+    edit: 'Rediger'
+    edit_thread: 'Rediger'
+    close_thread: 'Luk'
+    mute_thread: 'Slå notifikationer fra'
+    move_thread: 'Flyt'
+    print_thread: 'Print'
+    delete_thread: 'Slet'
+    add_comment: 'Kommenter'
+  delete_thread_form:
+    aria_label: 'Slet debat'
+    title: Slet debat
+    body: Er du sikker på at du vil slette denne debat?
+    confirm: 'Slet debat'
+    messages:
+      success: Debat slettet
+  move_thread_form:
+    aria_label: Flyt debat
+    title: Flyt debat
+    confirm: Flyt debat
+    confirm_change_to_private_thread: '{{groupName}} er ern offentlig gruppe. Hvis du fortsætter, så vil denne debat bliver gjort offentlig.'
+    messages:
+      success: Debatten er flyttet til {{name}}
+  delete_comment_dialog:
+    title: 'Slet kommentar'
+  contact_message_form:
+    contact_us: 'Kontakt os'
+    name_label: 'Dit navn'
+    name_placeholder: 'Indtast dit navn...'
+    subject_label: "Emne"
+    email_label: 'Din emailadresse'
+    email_placeholder: 'Indtast din emailadresse...'
+    message_label: 'Din besked'
+    send_message: 'Send besked'
+  explore_page:
+    single_search_result: "1 offentlig gruppe der matcher <strong>{{searchTerm}}:</strong>"
+    multiple_search_results: "{{resultCount}} offentlige grupper der matcher <strong>{{searchTerm}}:</strong>"
+    newest_first: Nyeste først
+  global:
+    messages:
+      reload: 'Genopfrisk'
+  decision_tools_card:
+    proposal_title: Forslag
+    poll_title: Meningsmåling
+    meeting_title: Find et tidspunkt
+  poll_common:
+    have_your_say: Giv din mening til kende
+    your_response: Dit valg
+    reason: Begrundelse
+    message: Besked
+    results: Resultat
+    responses: Svar
+    vote: Stemme
+    votes: Stemmer
+    update_outcome: Rediger resultat
+    outcome: Resultat
+    statement: Statement
+    load_more: Hent mere
+    details: Detaljer
+    participant_name: Dit navn
+    participant_email: Emailadresse
+    share_poll: Del meningsmåling
+    share_proposal: Del forslag
+    share_count: Del checkmåling
+    start_poll: Opret en beslutning
+    publish_poll: Den meningsmåling
+    share_outcome: Del resultat
+    save_changes: Gem
+  poll_common_attachment_form:
+    label: Vedhæftede filer
+  poll_common_card:
+    show_results: Vis resultater
+  discussions_panel:
+    open: Offentlig
+    all: Alle
+    closed: Lukket
+  members_panel:
+    order_by_name: 'Navn'
+    header_name: 'Navn'
+    header_username: 'Brugernavn'
+    accepted: 'Medlemmer'
+  polls_panel:
+    all: 'Alle'
+    open: 'Offentlig'
+    closed: 'Lukket'
+  poll_common_collapsed:
+    by_who: "af {{name}}"
+  poll_common_settings:
+    multiple_choice:
+      title: Tillad flere valg
+    anyone_can_participate:
+      title: Alle kan deltage
+    notify_on_participate:
+      title: Send en notifikation til mig når folk deltager
+  poll_common_closing_at_field:
+    closing: Lukker
+  poll_card:
+    started_by: Oprettet af {{name}}
+  poll_common_votes_panel:
+    newest_first: Nyeste først
+    oldest_first: Ældste først
+    priority_first: Enig først
+    priority_last: Blokkerer først
+    no_votes_yet: Ingen stemmer er afgivet endnu
+    change_results_order: Skift sorteringsrækkefølge for resultat
+    none_of_the_above: (Ingen af de tidligere)
+  poll_common_outcome_form:
+    update_title: Rediger resultat
+    outcome_created: Resultat oprettet
+    outcome_updated: Resultat gemt
+    statement_placeholder: Give et kort resume af kommentarerne og fortæl hvad der er det næste skridt.
+    submit: Del resultat
+  poll_common_outcome_panel:
+    authored_by: 'Af {{name}}'
+  poll_common_form:
+    voting_methods:
+      time_poll: Find et tidspunkt
+    title: Titel
+    details: Beskrivelse
+    options: Indstillinger
+    closing: Lukker
+    closed: Lukket
+    start: Start
+    start_poll: Opret meningsmåling
+    update: Opdater
+  poll_proposal_form:
+    start_header: Opret forslag
+    edit_header: Rediger forslag
+    title_placeholder: F.eks. Lad os flyve til månen!
+    proposal_created: Forslag oprettet
+    proposal_updated: Forslag redigeret
+  poll_poll_form:
+    start_header: Opret meningsmåling
+    edit_header: Rediger meningsmåling
+    title_placeholder: F.eks. hvor vil du på ferie?
+    details_placeholder: Beskriv alle de detaljer der skal til for at deltagerene kan træffe sin beslutning.
+    add_option_placeholder: Tilføj valgmulighed
+    remove_option: Slet valgmulighed
+    poll_created: Meningsmåling oprettet
+    poll_updated: Meningsmpling redigeret
+  poll_proposal_vote_form:
+    default_reason_placeholder: Begrund venligst dit valg
+    abstain_reason_placeholder: Lad folk vide hvorfor du stemmer blankt på dette forslag
+    agree_reason_placeholder: Hvad synes du er godt ved dette forslag og hvordan vil det komme gruppen gavn?
+    disagree_reason_placeholder: Hvordan kunne dette forslag forbedres så at du kan bakke det op?
+    block_reason_placeholder: Forklar venligst hvorfor du blokkerer dette forslag og hvorfor du mener at det ikke skal videre.
+    stance_created: Stemme afgivet
+    stance_updated: Stemme redigeret
+  poll_proposal_options:
+    'yes': 'Ja'
+    'no': 'Nej'
+    agree: Enig
+    abstain: Stemmer blankt
+    disagree: Uenig
+    block: Blokkerer
+    agree_meaning: Dette forslag er godt nok til at jeg mener at gruppen skal godkende det
+  poll_count_form:
+    title_placeholder: F.eks. Hvem ønsker at være med i arbejdsgruppen?
+  poll_count_options:
+    'yes': 'Ja'
+    'no': 'Nej'
+  poll_count_vote_form:
+    reason_label: Besked
+    reason_placeholder: Skrive en besked
+  poll_meeting_chart_panel:
+    total: Total
+  poll_poll_vote_form:
+    stance_created: Stemme afgivet
+    stance_updated: Stemme redigeret
+  poll_score_vote_form:
+    stance_created: Stemme afgivet
+    stance_updated: Stemme redigeret
+  poll_meeting_vote_form:
+    your_response: Hvornår har du tid?
+    stance_created: Tilgængeligt tidspunkt gemt
+    stance_updated: Tilgængeligt tidspunkt opdateret
+  poll_dot_vote_vote_form:
+    stance_created: Stemme afgivet
+    stance_updated: Stemme redigeret
+  auth_form:
+    email_placeholder: you@example.com
+    name_placeholder: Dit navn
+    name: Navn
+    email: Email
+  chatbot:
+    username: Brugernavn
+    password: Adgangskode
+  webhook:
+    name_label: Navn
+  group_survey:
+    categories:
+      community: Lokalgruppe
+      other: Andre

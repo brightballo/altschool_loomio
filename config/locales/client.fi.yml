@@ -1,0 +1,100 @@
+fi:
+  common:
+    confirm_discard_changes: Hylätäänkö muutoksesi?
+    time:
+      am: aamupäivällä
+      pm: iltapäivällä
+    closing_in: 'Sulkeutuu {{time}}'
+    closed_ago: 'Suljettu {{time}}'
+    volume: 'Äänenvoimakkuus'
+    notification_volume: 'Ilmoitusten äänenvoimakkuus'
+    group: 'Ryhmä'
+    groups: 'Ryhmät'
+    privacy:
+      privacy: 'Yksityisyys'
+      public: 'Julkinen'
+      open: 'Avoin'
+      closed: 'Suljettu'
+      private: 'Yksityinen'
+      secret: 'Salainen'
+    selected: 'Valittu'
+    date_range:
+      today: 'Tänään'
+      yesterday: 'Eilen'
+      thisweek: 'Tällä viikolla'
+      thismonth: 'Tässä kuussa'
+      older: 'Vanhempi'
+    more_help: 'Lisää apua'
+    copied: 'Kopioitu leikepöydälle'
+    action:
+      back: 'Back'
+      close: 'Sulje'
+      save: 'Tallenna'
+      save_changes: 'Tallenna muutokset'
+      update_settings: 'Päivitä asetukset'
+      reply: 'Vastaa'
+      edit: 'Muokkaa'
+      remove: 'Poista'
+      like: 'Tykkää'
+      unlike: 'En tykkääkkään'
+      update: 'Päivitä'
+      cancel: 'Peruuta'
+      show_more: "Näytä lisää"
+      view_all: "Näytä kaikki"
+      new_thread: "Uusi aihe"
+      loading: 'Ladataan'
+      translate: 'Käännä'
+      upload: 'Lataa'
+      uploading: 'Lataaminen'
+  error_page:
+    forbidden: 'Sinulla ei ole oikeutta tehdä tätä.'
+    page_not_found: 'Emme voineet löytää tätä. Se voi olla poistettu tai siirretty.'
+    internal_server_error: 'Olemme pahoillamme, mutta jotain meni pieleen. Ole hyvä ja koeta uudestaan.'
+  volume_levels:
+    loud: 'Äänekäs'
+  change_volume_form:
+    simple:
+      label: Ilmoitukset
+  inbox:
+    unread: 'Lukematon'
+  comment_form:
+    messages:
+      updated: 'Kommentti päivitettiin'
+      destroyed: 'Kommentti poistettiin'
+    edit_comment: 'Muokkaa kommenttia'
+    delete_comment: 'Poista kommentti'
+    private_privacy_notice: 'Sinun kommenttisi tulee olemaan vain näkyvillä {{groupName}}-ryhmän jäsenille.'
+    public_privacy_notice: 'Sinun kommenttisi tulee olemaan näkyvillä kaikille webissä.'
+  navbar:
+    recent_title: 'Mene kojelaudalle'
+    unread_title: 'Katso lukemattomat toiminnat'
+  notifications:
+    header: "Ilmoitukset"
+  discussion_form:
+    group_label: 'Ryhmä'
+    privacy_label: 'Yksityisyys'
+  group_form:
+    privacy: 'Yksityisyys'
+    submit_update: 'Päivitä asetukset'
+  invitation_form:
+    group: 'Ryhmä'
+  memberships_page:
+    remove_member_label: 'Poista'
+  dashboard_page:
+    threads_from:
+      today: 'Tänään'
+      yesterday: 'Eilen'
+  thread_context:
+    close_thread: 'Sulje'
+  delete_comment_dialog:
+    title: 'Poista kommentti'
+  poll_common:
+    save_changes: Tallenna
+  discussions_panel:
+    open: Avoin
+    closed: Suljettu
+  polls_panel:
+    open: 'Avoin'
+    closed: 'Suljettu'
+  poll_common_form:
+    closed: Suljettu

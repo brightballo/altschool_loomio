@@ -1,0 +1,194 @@
+ru:
+  explore:
+    header: Смотреть публичные группы
+  activerecord:
+    errors:
+      messages:
+        blank: не может быть пусто
+        invalid: не является допустимым значением
+  errors:
+    404:
+      title: Не найдено
+    noscript: Для работы Loomio требуется Javascript! Включите, пожалуйста, Javascript в своем браузере.
+    return_home: Вернуться к началу
+    not_found: 404 файл не найден
+    messages:
+      email: не является верным адресом электронной почты
+      spoofed_media_type: Содержимое этого файла не соответствует его названию
+  group:
+    stats:
+      members: Участники
+      subgroups: Подгруппы
+      threads: Обсуждения
+      comments: Комментарии
+      poll_types:
+        proposal: Предложение
+        time: Голосование за время встречи
+  user:
+    deleted_user: "Удаленный пользователь"
+    placeholder_name: "Приглашенный пользователь (%{hostname})"
+    error:
+      sign_in_required_html: |
+          Вы должны войти в систему, чтобы продолжить.
+          Пожалуйста <a href="/dashboard" target="_blank">войдите в систему</a> и перезагрузите страницу, чтобы продолжить.
+      recaptcha: "Мы не убедились, что вы не робот! Еще раз!"
+      bad_login: "Извините, этот пароль не совпадает с тем, который у нас есть в файле"
+      username_must_be_alphanumeric: "В имени пользователя должны быть только маленькие английские буквы и цифры."
+  poll:
+    error:
+      cannot_add_options: Не получается добавить вариантов к этому опросу
+      cannot_remove_options: Не получается удалить варианты из этого опроса
+      must_have_options: Нужен хотя бы один вариант
+    export:
+      percent_voted: "%{num}/%{denom}(%{percent}) участников выразили свое мнение"
+      title: Название
+      author: Автор
+      email: Email
+      created_at: Создано
+      closing_at: Закрывается
+      closed_at: Закрыто
+      is_latest: Последний
+      engagement: Участие
+      stances: Позиции
+      participants: Участники
+      details: Детали
+      group_name: Название группы
+      discussion_title: Название нити
+      outcome_author: Автор результата
+      outcome_created_at: Результат создан
+      outcome_statement: Заявление из результата
+      poll_url: URL опроса
+      reason: Причина
+      participant: Участник
+      also_available: Также доступно в
+      total: Всего
+  stance:
+    error:
+      too_short: Сделайте, пожалуйста, выбор
+  invitation:
+    invitation_cancelled: К сожалению, координатор группы отозвал это приглашение. Попросите, пожалуйста, новое приглашение от своей группы.
+    invitation_already_used: Этим приглашением уже воспользовались. Пожалуйста, зайдите напрямую в Loomio и продолжите в своей группе.
+  subscriptions:
+    active: Активный
+    inactive: Неактивный
+  user_mailer:
+    group_export_ready:
+      subject: Данные для экспорта группы %{group_name}
+      body_html: |
+          Скачайте данные вашей группы <a href="%{url}">отсюда</a>. Учите, пожалуйста, что эта ссылка действует одну неделю.
+    accounts_merged:
+      subject: "Ваши аккаунты на %{site_name} объединились."
+      body_html: |
+          ,
+          два ваших аккаунта loomio объединены в один.
+          С этого момента, чтобы зайти в loomio, используйте %{email} для логина.
+  email:
+    common:
+      or_enter_code: Или введите внизу код
+    login:
+      subject: Войти на %{site_name}
+      login: Войти как %{name}
+    reactivate:
+      subject: Возобновите ваш аккаунт на %{site_name}
+      login: Возобновить %{name}
+    contact_request:
+      subject: "%{name}хочет связаться с вами на %{site_name}!"
+      intro: "%{name}(%{email}) отправил вам запрос для связи."
+      footer: "Если вы ответите на это письмо, ответ попадет напрямую к %{name}."
+    reset_password:
+      greeting: |
+          %{name}
+          Вот ссылка, по которой вы сможете сбросить пароль от своего аккаунта Loomio:
+      link_text: Сбросить пароль
+      signoff: |
+          Вы получили это письмо, потому что кто-то ввел вашу почту в форму восстановления пароля на сайте %{hostname}.
+          Однако, ваш пароль не поменяется, пока вы не пройдете по ссылке выше и не заполните форму.
+          Если вам по-прежнему трудно войти, свяжитесь с поддержкой, ответив на это письмо.
+    by_who: от %{person}
+    reply_to_this_discussion: Ответить в этой дискуссии
+    view_group: Смотреть группу
+    to_join_group:
+      subject: "%{member} приглашает вас вступить в %{group_name} на %{site_name}"
+      invitation_text: "%{member} приглашает вас в свою группу %{group_name}."
+      invitation_text_html: "приглашает вас в свою группу"
+      link_help: "Кликнув ниже, вы примете приглашение:"
+      accept_invitation: "Принять приглашение"
+      stop_emails: "Прекратить получать письма от %{site_name}"
+    resend_to_join_group:
+      subject: "%{member} ждет, когда вы вступите в %{group_name} на %{site_name}"
+    user_added_to_group:
+      subject: "Вы добавлены %{who} к %{which_group} на %{site_name}"
+      content: "Вы добавлены %{who} к %{which_group}."
+      content_html: "Вы добавлены <strong>%{who}</strong> к <strong>%{which_group}</strong>."
+      link_help: "Кликните по ссылке ниже и попадете в группу:"
+    unsubscribe: 'Отписаться или изменить почтовые предпочтения:'
+    unsubscribe_html: "<a href='%{link_path}'>%{link_text}</a>, чтобы отписаться или изменить почтовые предпочтения."
+    catch_up:
+      daily_subject: Вчера на сайте %{site_name}
+      weekly_subject: Прошлая неделя на сайте %{site_name}
+      do_not_reply: Не отвечайте, пожалуйста, на это письмо.
+      mark_as_read: Отметить прочитанным
+      thanks_for_reading: Спасибо, что прочли и удачного дня!
+      marked_as_read_success: Все в этом письме отмечено прочитанным
+      click_here: Кликните здесь
+    group_membership_approved:
+      intro: "Ваш запрос на доступ к группе %{group_name} одобрен."
+      intro_html: "Ваш запрос на доступ к группе <strong>%{group_name}</strong> одобрен."
+      link_help: "Кликните на ссылке внизу, чтобы вступить в %{group_name} и начать:"
+      subject: "Ваш запрос на вступление в %{group_name} одобрен"
+      join_group: "Вступить в группу"
+    membership_request:
+      intro_html: просит доступа к одной из ваших групп.
+      subject: "%{who} хочет вступить в %{which_group}"
+      view_group: Здесь вы можете одобрить или отклонить просьбу
+      button_text: Смотреть проьбу
+  announcement_count_emails: "%{count} писем"
+  email_actions:
+    unfollowed_discussion: Вы отключили письма этой ветки.
+  discussion_mailer:
+    reply_or_view_online_html: "Ответьте на это письмо напрямую или <a href='%{url}'>посмотрите его на %{hostname}</a>."
+    turn_off_notifications_html: "<a href='%{url}'>Отключить почтовые уведомления</a> для этой дискуссии."
+    change_email_preferences_html: "Изменить ваши <a href='%{email_preferences_url}'>почтовые предпочтения</a>."
+  footer:
+    about: О нас
+    blog: Блог
+    contact: Контакты
+    help: Помощь
+    privacy: Конфиденциальность
+    pricing: Цены
+    public_groups: Oбщедоступные группы
+    terms: Условия
+    independent_install_html: '%{hostname} работает с независимой копией Loomio: <a href="http://github.com/loomio/loomio">разузнать побольше</a>.'
+  password_reset:
+    change_your_password: Сменить ваш пароль
+    change_my_password: Сменить пароль
+    confirm_new_password: Подтвердить пароль
+    new_password: Новый пароль
+    email_guidelines_html: |
+        <p>Введите адрес электронной почты и получите ссылку на сброс пароля.</p>
+        <p>Если вы обычно логинитесь через Facebook или Google, введите адрес, к которому привязан тамошний аккаунт.</p>
+    reset_email_timeframe: Письмо может идти до 5 минут. Если вы его не видите, не забудьте посмотреть в папке со спамом.
+    length_restriction: Пароль должен быть не короче 8 символов.
+    forbidden_passwords: Типовые пароли вроде "password" запрещены, так как небезопасны.
+  introduction_thread:
+    title: Добро пожаловать! Пожалуйста, представьтесь
+    description: |
+        Найдите время рассказать группе немного о себе. Напишите внизу комментарий.
+        Какова ваша роль или подход к участию в этой группе? Что людям стоит о вас знать, чтобы понимать, из чего вы исходите?
+  how_it_works_thread:
+    title: Как пользоваться Loomio
+  group_mailer:
+    resend: 'НАПОМИНАЕМ: %{member} ждет, когда вы вступите в %{group_name}'
+  poll_mailer:
+    common:
+      why_send_this: Вы получили это письмо, потому что %{reason}
+      view_on_loomio: Посмотреть на %{site_name}
+      create_outcome: Поделиться результатом
+      your_response: "Ваш голос:"
+      please_respond: Пожалуйста ответьте
+      time_zone: (Время отображается согласно %{zone})
+      undecided_members: Неопределившиеся члены (%{count})
+      undecided_visitors: Неопределившиеся гости (%{count})
+      more_undecided: "Еще %{count}..."
+      vote_now: Голосовать!
+      you_have_until: Поучаствовать можно до %{when}.

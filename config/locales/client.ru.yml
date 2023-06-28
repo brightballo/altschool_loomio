@@ -1,0 +1,570 @@
+ru:
+  templates:
+    try_loomio: Попробуйте Loomio
+  loomio_onboarding:
+    group_progress_card:
+      activities:
+        set_description: Задайте описание вашей группы
+        start_thread: Начните ветвь дискуссии
+        make_decision: Начните решение
+      learn_more: Смотрите дальше в Справке Loomio
+      dismiss_this_card: Убрать эту карточку
+  plan_names:
+    free: Бесплатная
+    trial: Пробная
+    pro: Про
+    small: Небольшая
+    medium: Средняя
+    large: Крупная
+    monthly: Ежемесячно
+    yearly: Ежегодно
+  current_plan_button:
+    upgrade: Обновить
+    buy_now: Купи сейчас
+    trial_expired: Срок вашей пробной версии истек. Обновите, чтобы продолжить использовать Loomio.
+  subscription_status:
+    members: "Участники"
+  loomio_tags:
+    tags: Метки
+    apply_tags: Применить метки
+    name_label: Название
+    color_label: Цвет
+    modal_title: Создать новую метку
+    modal_edit_title: Править метку
+    modal_destroy_title: Удалить метку
+    helptext: Метки позволяют разбивать обсуждения на категории и легко их потом находить
+    tag_created: Метка записана
+    tags_marked: Ветви, помеченные '{{name}}' в {{groupName}}
+  new_poll_types:
+    poll: выбирать
+  timezones:
+    local: местное время ({{value}})
+  common:
+    please_wait: Пожалуйста, подождите
+    version: Версия
+    or: или
+    history: История
+    add: Добавить
+    you: Ты
+    expand: Развернуть
+    all_day: Весь день
+    ok_got_it: Ок, понятно
+    learn_more: Узнайте больше
+    not_found: Не найдено
+    time_zone: Часовой пояс
+    local_time: Местное время
+    confirm_discard_changes: Отменить изменения?
+    time:
+      am: день
+      pm: вечер
+    closing_in: 'Закрывается {{time}}'
+    closed_ago: 'Закрыто {{time}}'
+    volume: 'Громкость'
+    notification_volume: 'Громкость оповещений'
+    group: 'Группа'
+    groups: 'Группы'
+    organization: "Организация"
+    organizations: "Организации"
+    threads: 'Обсуждения'
+    decisions: 'Решения'
+    settings: 'Настройки'
+    help: 'Помощь'
+    anonymous: Анонимный
+    email_address: Электронный адрес
+    privacy:
+      privacy: 'Конфиденциальность'
+      public: 'Публичная'
+      open: 'Открыто'
+      closed: 'Закрыто'
+      private: 'Приватная'
+      secret: 'Выделить'
+    selected: 'Выбранные'
+    date_range:
+      today: 'Сегодня'
+      yesterday: 'Вчера'
+      thisweek: 'Эта неделя'
+      thismonth: 'Этот месяц'
+      older: 'Ранее'
+    more_help: 'Дополнительная справка'
+    copy: 'Копировать'
+    copy_text: 'Копировать текст'
+    copied: 'Скопировать в буфер'
+    total: Всего
+    action:
+      print: Печать
+      preview: Предварительный просмотр
+      pin: Закрепить
+      unpin: Открепить
+      search: 'Поиск'
+      filter: 'Фильтр'
+      back: 'Назад'
+      next: 'Следующее'
+      close: 'Закрыть'
+      reopen: 'Открыть вновь'
+      save: 'Сохранить'
+      move: 'Переместить'
+      save_changes: 'Сохранить изменения'
+      update_settings: 'Обновить настройки'
+      reply: 'Ответить'
+      edit: 'Редактировать'
+      remove: 'Удалить'
+      like: 'Нравится'
+      unlike: 'Не нравится'
+      update: 'Обновить'
+      cancel: 'Отмена'
+      show_more: "Показать больше"
+      view_all: "Показать все"
+      new_thread: "Новая тема"
+      loading: 'Загрузка'
+      translate: 'Перевести'
+      upload: 'Скачать'
+      uploading: 'скачивание'
+      load_more: 'Загрузить больше'
+      share: Поделиться
+      ok: Хорошо
+      retry: Повторите попытку
+      clear: Очистить
+      done: Сделано
+      start: Начать
+      delete: Удалить
+      unsubscribe: Отписаться
+      subscribe: Подписаться
+      remind: Напомнить
+      resend: Переслать
+      send: Послать
+      invite: Приглашать
+      resent: Переслать приглашение
+      export: Экспортировать
+    formatting_help:
+      label: 'Форматирование'
+  merge_accounts:
+    modal:
+      submit: Подтвердить
+  emoji_picker:
+    search: Поиск
+  ordinal:
+    _1: 1ый
+    _2: 2ый
+    _3: 3ый
+    _4: 4ый
+    _5: 5ый
+    _6: 6ый
+    _7: 7ый
+    _8: 8ый
+    _9: 9ый
+    _10: 10ый
+  devise:
+    sessions:
+      signed_up: Зарегистрирован успешно!
+    failure:
+      inactive: 'Аккаунт, связанный с указанным адресом электронной почты, деактивирован. Если вы хотите раективировать аккаунт, свяжитесь с нами.'
+  error_page:
+    forbidden: 'У вас недостаточно прав'
+    page_not_found: 'Не найдено. Возможно было удалено или перемещено.'
+    internal_server_error: 'Извините, что-то не так. Попробуйте снова.'
+  verify_email_notice:
+    please_verify: Спасибо за участие! Пожалуйста, проверьте почтовый ящик, мы выслали на него ссылку, чтобы верифицировать Ваше голосование
+  previous_polls_page:
+    heading: Активности в {{имя}}
+    polls_count: Показать {{загруженное}}  {{итог}} решения
+    search_activities: Поиск решений
+  volume_levels:
+    loud: 'Заметный'
+    normal: 'Нормальный'
+    quiet: 'Ограниченный'
+    mute: 'Заглушен'
+    unmute: 'Включить'
+  pin_event_form:
+    title_label: Название
+  change_volume_form:
+    simple:
+      label: Уведомления
+      loud: Подписаться
+      normal: Нормальный
+      quiet: Игнорировать
+    aria_label: "Изменить настройки почтового ящика"
+    loud_label: "Вся активность"
+    normal_label: "Объявления"
+    quiet_label: "Нет "
+    mute_label: "Заглушен"
+    discussion:
+      apply_to_all: "Применить эти настройки ко всем темам в этой группе."
+      messages:
+        loud: "Вы будете оповещенны по эмаилу о всей активности в этой теме."
+        normal: "Вам будут приходить электронные письма касательно предложений в этой ветке."
+        quiet: "Вы не будете получать письма об этой ветке."
+    membership:
+      loud_description: "Вы будете оповещенны по эмаилу о всей активности в этой группе."
+      normal_description: "Вы будете оповещенны по эмаилу о всей активности в этой группе."
+      apply_to_all: "Применить эти настройки для всех моих групп"
+    user:
+      title: Настройки почты для новых групп
+      loud_description: "Вы будете уведомлены письмом на указанный почтовый адрес по каждой активности в тех группах, к которым Вы присоединитесь"
+      normal_description: "Вы будете уведомлены письмом на указанный почтовый ящик по каждому новому объявлению в группах, к которым Вы присоединились."
+      apply_to_all: "Применить эти настройки для всех моих групп"
+  close_explanation_modal:
+    aria_label: Закрыть тему
+    close_thread: Закрыть тему
+  inbox:
+    clear: 'Очистить'
+    latest: 'Последний'
+    unread: 'Непрочитанные'
+    closing_in: 'Закрывается'
+  sign_up_form:
+    password_label: 'Пароль:'
+    password_confirmation_label: 'Введите пароль повторно:'
+  signed_out_modal:
+    aria_label: 'Сессия закончена'
+    title: "Ваша сессия закончилась"
+    ok: "Хорошо"
+  comment_reply_form:
+    aria_label: 'Ответить'
+  comment_form:
+    aria_label: 'Добавить комментарий '
+    attachments:
+      add_attachment: 'Приложить файл'
+      remove_attachment: 'Удалить вложение'
+    messages:
+      created: 'Комментарий добавлен'
+      replied: '{{name}} оповещен об ответе'
+      updated: 'Комментарий обновлен'
+      destroyed: 'Комментарий удалён'
+    say_something: Скажи что-то...
+    edit_comment: 'Редактировать коментарий'
+    delete_comment: 'Удалить комментарий'
+    cancel_reply: 'Отменить ответ'
+    confirm_delete_message: 'Вы уверены что хотите удалить комментарий?'
+    confirm_delete: 'Удалить комментарий'
+    in_reply_to: "Ответить: {{name}}"
+    write_a_comment: "Напишите комментарий..."
+    post_comment: "Опубликовать"
+    submit_button:
+      label: 'Опубликовать'
+    public_privacy_notice: 'Ваш комментарий будет виден всем пользователям сети'
+    sign_in: "Войдите чтобы присоеденится к разговору"
+  thread_nav:
+    participants: Участники
+  sidebar:
+    threads: 'Обсуждения'
+    my_groups: 'Мои группы'
+    all_groups: 'Все группы'
+    recent_threads: 'Последние темы'
+    muted_threads: 'Выключить уведомления темы'
+    start_group: 'Новая организация'
+    explore: 'Публичная группа'
+    start_thread: Новая тема
+    start_decision: Новое решение
+    aria_labels:
+      heading: 'Боковая панель'
+      groups_list: 'Группы'
+      user_list: 'Активность пользователя'
+  navbar:
+    recent_title: 'В панель управления'
+    start_thread: 'Новая тема'
+    notifications: 'Панель уведомлений'
+    search:
+      results_aria_label: 'Результаты поиска'
+      no_results: 'Темы не найдены'
+      close: 'Закрыть панель поиска'
+      placeholder: 'Поиск'
+      loading: 'Загружаются результаты'
+      discussions: 'Обсуждения'
+      proposals: 'Голосования'
+      comments: 'Комментарии'
+    sign_in: 'Войти'
+    toggle_sidebar: 'Скрыть боковую панель'
+    logo_title: 'Домашняя страница'
+  user_dropdown:
+    edit_profile: 'Редактировать профиль'
+    help: 'Помощь'
+    sign_out: 'Выйти'
+  membership_card:
+    invite_to_group: "Пригласите в группу"
+  membership_dropdown:
+    invitation_resent: "Переслать приглашение"
+    make_coordinator: 'Сделать администратором'
+  notifications:
+    header: "Уведомления"
+    no_notifications: "У Вас нет уведомлений"
+    with_title:
+      user_mentioned: "%{actor} упомянули вас в: %{title}"
+      user_reminded: "%{actor} напоминает, чтобы вы проголосовали за: %{title}"
+    without_title:
+      poll_expired: "%{poll_type} закрылся"
+  discussion_fork_actions:
+    move: Переместить
+  discussion_form:
+    invite: Приглашать
+    aria_label: 'Форма темы'
+    messages:
+      created: 'Тема начата'
+      updated: 'Тема обновленна'
+    new_discussion_title: 'Начать новую тему'
+    edit_discussion_title: 'Редактировать тему'
+    group_label: 'Группа'
+    group_placeholder: 'Выбрать группу'
+    title_label: 'Название'
+    context_label: 'Описание'
+    privacy_label: 'Конфиденциальность'
+  announcement:
+    form:
+      invitation_message_label: Сообщение
+      group_announced:
+        title: Пригласите в группу
+      poll_reminder:
+        message_label: Сообщение
+      wip_poll_reminder:
+        message_label: Сообщение
+      outcome_announced:
+        title: Поделиться результатами
+  action_dock:
+    add_resource: Добавить вложение
+    add_comment: Комментарий
+    edit_thread: Редактировать контекст
+    translate_thread: Перевести контекст
+    edit_poll: Редактировать опрос
+    announce_poll: Пригласите людей проголосовать
+    translate_poll: Перевести опрос
+    edit_stance: Изменить позицию
+    translate_stance: Перевести голос
+    edit_comment: Редактировать коментарий
+    delete_comment: Удалить комментарий
+    reply_to_comment: Ответить
+    translate_comment: Перевести комментарий
+    edit_outcome: Редактировать результат
+    translate_outcome: Перевести результат
+    edited: Изменено
+    history: История
+    pin_thread: Закрепить тему
+    tag_thread: Управлять метками
+    close_thread: Закрыть тему
+    delete_thread: Удалить тему
+  formatting:
+    attach: Приложить файл
+    merge_selected: Объединить выделенные ячейки
+  cover_photo_form:
+    heading: 'Новое фото обложки'
+    upload_link: 'Загрузить новое фото обложки'
+    upload_success: 'Фото обложки успешно загружено'
+  logo_photo_form:
+    heading: ' Новый логотип группы'
+    upload_link: 'Загрузить новый логотип группы'
+    image_size_helptext: 'Идеальный размер изображения 100х100px'
+    upload_success: 'Логотип успешно изменен'
+  join_group_button:
+    join_group: Вступить в группу
+    membership_requested: Заявка на участие
+  membership_request_form:
+    heading: Подать заявку на вступление
+    name_label: Имя
+    email_label: Email
+    submit_button: Подать заявку на вступление
+  revision_history_modal:
+    aria_label: История изменений
+    posted: Размещено
+    current_revision: Последний
+  reactions_display:
+    you: "Вы"
+    you_and_name: "Вы и {{name}}"
+  group_page:
+    threads: Обсуждения
+    members: Участники
+    files: Файлы
+    settings: Настройки
+    subgroups: Подгруппы
+    messages:
+      leave_group_success: 'Вы покинули эту группу'
+    new_cover_photo: 'Загрузить новое фото обложки'
+    new_group_logo: 'Загрузить новый логотип группы'
+    open_discussions: 'Открыть тему'
+    invite_people: 'Приглашать'
+    visibility_label: 'Видимость'
+    options_label: 'Опции'
+    options:
+      label: 'Опции'
+      edit_group: 'Редактировать настройки группы'
+      manage_members: 'Управлять участниками'
+      add_subgroup: 'Добавить подгруппу'
+      email_settings: 'Настройки уведомлений'
+      leave_group: 'Покинуть группу'
+      deactivate_group: 'Деактивировать группу'
+  leave_group_form:
+    submit: 'Да, покинуть эту группу'
+  archive_group_form:
+    aria_label: 'Деактивировать группу'
+    title: 'Деактивировать группу'
+  group_form:
+    new_organisation: Новая организация
+    new_group: Новая группа
+    start_group_heading: Создать группу
+    start_subgroup_heading: Создать подгруппу
+    edit_group_heading: Редактировать настройки группы
+    edit_subgroup_heading: Редактировать настройки подгруппы
+    group_name: Название группы
+    start_organization_heading: Новая организация
+    description: 'Описание'
+    privacy: 'Конфиденциальность'
+    profile: Профиль
+    public_threads: 'Только публичные темы'
+    public_or_private_threads: 'Разрешить публичные и закрытые темы'
+    submit_update: 'Обновить настройки'
+  membership_requests_page:
+    approve: Подтвердить
+    ignore: Игнорировать
+  invitation_form:
+    invite_people: 'Пригласите людей'
+    copy_link: 'Копировать'
+    custom_message: 'Сообщение от пользователя'
+    add_members: 'Добавить участников'
+    done: 'Сделано'
+    messages:
+      invitation_sent: 'Приглашение отправлено'
+  memberships_page:
+    members: 'Участники'
+    name_label: 'Имя'
+    remove_member_label: 'Удалить'
+  profile_page:
+    profile: 'Профиль'
+    name_label: 'Имя'
+    email_label: 'Email'
+    locale_label: 'Язык'
+  email_settings_page:
+    monday: Понедельник
+    tuesday: Вторник
+    wednesday: Среда
+    thursday: Четверг
+    friday: Пятница
+    saturday: Суббота
+    sunday: Воскресенье
+    announcement_label: Объявления
+    edit: Редактировать
+  dashboard_page:
+    aria_label: 'Кабинет'
+    recent_threads: "Последние темы"
+    mark_as_read: Отметить прочитанным
+    dismiss: Отклонить
+    filtering:
+      filter_threads: Фильтр Темы
+      filter_threads_aria_label: Фильтр Темы
+      proposals: Голосования
+    thread_preview:
+      you_voted: 'Ваш голос {{position}}.'
+    threads_from:
+      today: 'Сегодня'
+      yesterday: 'Вчера'
+  inbox_page:
+    unread_threads: Непрочтенные темы
+    no_groups:
+      start: Начать
+      or: или
+  discussion:
+    closed:
+      closed: 'Тема закрыта'
+  activity_card:
+    latest: Последний
+    context: Описание
+    attachment_display:
+      image_alt: 'Прикрепленное изображение'
+    comment: Комментарий
+  thread_group:
+    aria_label: Название группы
+  thread_context:
+    thread_options: 'Настройки обсуждения'
+    close_thread: 'Закрыть'
+    reopen_thread: 'Открыть вновь'
+    pin_thread: 'Закрепить'
+    unpin_thread: 'Открепить'
+    mute_thread: 'Заглушить'
+    move_thread: 'Переместить'
+    print_thread: 'Печать'
+    delete_thread: 'Удалить'
+    add_comment: 'Комментарий'
+  pin_thread_modal:
+    title: Закрепить тему
+    pin_thread: Закрепить тему
+  delete_thread_form:
+    aria_label: 'Удалить тему'
+    title: Удалить тему
+    confirm: 'Удалить тему'
+    messages:
+      success: Тема удалена
+  delete_comment_dialog:
+    title: 'Удалить комментарий'
+  contact_message_form:
+    contact_us: 'Наши контакты'
+    name_label: 'Ваше имя'
+    name_placeholder: 'Введите ваше имя...'
+    subject_label: "Заголовок"
+    email_label: 'Ваш электронный адрес'
+    email_placeholder: 'Введите ваш электронный адрес...'
+    message_label: 'Ваше сообщение'
+    send_message: 'Отправить сообщение'
+  decision_tools_card:
+    proposal_title: Предложение
+    poll_title: Опрос
+    score_title: Оценка опроса
+    meeting_title: Голосование за время встречи
+    ranked_choice_title: Порядок ранжированния
+  poll_common:
+    vote_now: Голосовать!
+    have_your_say: Выразить свое мнение
+    reason: Причина
+    results: Результаты
+    responses: Ответы
+    start_poll: Начните решение
+    share_outcome: Поделиться результатом
+    save_changes: Сохранить
+  discussions_panel:
+    open: Открыто
+    all: Все
+    closed: Закрыто
+  members_panel:
+    order_by_name: 'Название'
+    header_name: 'Название'
+    accepted: 'Участники'
+  polls_panel:
+    all: 'Все'
+    open: 'Открыто'
+    closed: 'Закрыто'
+  poll_common_outcome_form:
+    submit: Поделиться результатами
+  poll_common_form:
+    voting_methods:
+      ranked_choice: Порядок ранжированния
+      time_poll: Голосование за время встречи
+    closed: Закрыто
+    start: Начать
+  poll_poll_form:
+    edit_header: Редактировать опрос
+  poll_proposal_options:
+    'yes': 'Да'
+    'no': 'Нет'
+  poll_count_options:
+    'yes': 'Да'
+    'no': 'Нет'
+  poll_meeting_chart_panel:
+    total: Всего
+  poll_remove_vote:
+    success: Голосование удалено
+  auth_form:
+    enter_your_name: Введите свое имя
+    invalid_password: "Извините, этот пароль не совпадает с тем, который у нас есть в файле"
+    email_placeholder: You@example.com
+    name_placeholder: Ваше имя
+    name: Название
+  chatbot:
+    password: Пароль
+    slack: Slack
+    microsoft_teams: Microsoft Teams
+  webhook:
+    formats:
+      microsoft: Microsoft Teams
+      slack: Slack
+    name_label: Название
+  powered_by:
+    privacy_policy: Политика конфиденциальности
+    terms_of_service: Условия использования
+    front_page: Заглавная страница
+  group_survey:
+    categories:
+      community: Общественные группы

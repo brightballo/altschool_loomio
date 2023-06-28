@@ -1,0 +1,8 @@
+tmp/*
+log/*
+cache/*
+.git/*
+storage/*
+**/.git
+vue/node_modules/*
+config/deploy.yml

@@ -1,0 +1,13 @@
+hr:
+  group:
+    stats:
+      members: Članovi
+      poll_types:
+        proposal: Prijedlog
+  footer:
+    about: O nama
+    blog: Blog
+    contact: Kontakt
+    privacy: Privatnost
+    public_groups: Javne grupe
+    terms: Uvjeti

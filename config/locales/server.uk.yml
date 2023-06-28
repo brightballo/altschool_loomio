@@ -1,0 +1,207 @@
+uk:
+  explore:
+    header: Переглянути відкриті групи
+  activerecord:
+    errors:
+      messages:
+        blank: не може бути порожнім
+        invalid: не є допустимим значенням
+  errors:
+    404:
+      title: Не знайдено
+    noscript: Для роботи Loomio потрібний JavaScript! Щоб продовжити, увімкніть JavaScript у веб-переглядачі
+    return_home: Повернутися додому
+    not_found: Файл 404 не знайдено.
+    messages:
+      email: адреса електронної пошти не вірна
+      spoofed_media_type: Вміст файлу не відповідає його імені
+  group:
+    error:
+      handle_must_begin_with_parent_handle: "Має починатись з %{parent_handle}-"
+    stats:
+      group_stats: Статистика групи
+      members: Учасники
+      subgroups: Підгрупи
+      threads: Теми
+      polls: Опитування
+      votes: Голоси
+      comments: Коментарі
+      poll_types:
+        proposal: Пропозиція
+        rank: Ранжування
+        time: Опитування щодо часу
+  user:
+    deleted_user: "Видалені користувачі"
+    placeholder_name: "Запрошено користувача (%{hostname})"
+    error:
+      sign_in_required_html: |
+          Ви повинні увійти, щоб продовжити.
+          Будь ласка <a href="/dashboard" target="_blank">ввійдіть</a> а потім перезавантажте цю сторінку, щоб продовжити.
+      recaptcha: "Ми не змогли переконатися, що ви не робот. Будь ласка спробуйте ще раз!"
+      bad_login: "На жаль, цей пароль не збігається з тим, що збережений у профілі"
+      username_must_be_alphanumeric: "Ім'я користувача повинно містити лише прописні літери та цифри"
+  poll:
+    error:
+      cannot_add_options: Неможливо додати параметри до цього опитування
+      cannot_remove_options: Неможливо видалити параметри з цього опитування
+      must_have_options: В опитуванні має бути принаймні один варіант відповіді
+    export:
+      percent_voted: "%{num}/%{denom} (%{percent}) учасників висловили свою позицію"
+      title: Заголовок
+      author: Автор
+      email: Електронна адреса
+      created_at: Створено
+      closing_at: Закривається
+      closed_at: Закрито
+      is_latest: Є останнім
+      engagement: Залучено
+      stances: Позиції
+      participants: Учасники
+      details: Деталі
+      group_name: Назва групи
+      discussion_title: Заголовок теми
+      outcome_author: Автор результату
+      outcome_created_at: Результат створено
+      outcome_statement: Опис результату
+      poll_url: URL-адреса опитування
+      reason: Аргумент
+      participant: Учасник
+      also_available: Також доступний у
+      total: Разом
+  stance:
+    error:
+      too_short: Будь ласка, виберіть
+  invitation:
+    invitation_cancelled: На жаль, це запрошення було скасовано координатором групи. Запросіть інше запрошення від групи.
+    invitation_already_used: Це запрошення вже було використано. Будь ласка, увійдіть в Loomio для входу в свою групу.
+  subscriptions:
+    active: Активні
+    inactive: Не активні
+  user_mailer:
+    group_export_ready:
+      subject: Експорт даних групи %{group_name}
+      body_html: |
+          Завантажте <a href="%{url}">тут</a> дані групи. Зверніть увагу на те, що термін дії цього посилання закінчиться через тиждень.
+    accounts_merged:
+      subject: "Ваші облікові записи на %{site_name} було об'єднано."
+      body_html: |
+          Вітаємо %{name},
+          Ваші два облікових записи Loomio були об'єднані в один.
+          Відтепер для входу в Loomio, будь ласка, використовуйте <strong>%{email}</strong>.
+    merge_verification:
+      confirm_page:
+        merge: Об’єднати облікові записи
+  email:
+    common:
+      or_enter_code: Або введіть код нижче
+    login:
+      subject: Увійтни до %{site_name}
+      login: Увійти як %{name}
+    reactivate:
+      subject: Відновити обліковий запис %{site_name}
+      login: Відновити %{name}
+    contact_request:
+      subject: "%{name} хоче встановити з вами зв'язок у %{site_name}!"
+      intro: "%{name} (%{email}) надіслав вам запит на встановленя зв'язку."
+      footer: "Ви можете відповісти %{name} безпосередньо, відповівши на цей лист."
+    reset_password:
+      greeting: |
+          Вітаємо %{name}
+          Ось посилання щоб змінити пароль для свого облікового запису Loomio.
+      link_text: Скинути ваш пароль
+      signoff: |
+          Ваша електронна адреса була вказана в формі «Забули пароль» на %{hostname}.
+          Аби змінити пароль перейдіть за посиланням вище і заповніть форму.
+          Якщо проблеми з підключенням повторюються - напишіть у відповідь на цей лист щоб зв'язатися зі службою підтримки.
+    by_who: користувачем %{person}
+    reply_to_this_discussion: Відповісти в цьому обговоренні
+    view_group: Переглянути групу
+    to_join_group:
+      subject: "%{member} запросив(ла) вас долучитись до %{group_name} на %{site_name}"
+      invitation_text: "%{member} запросив(ла) вас приєднатися до своєї групи  %{group_name}."
+      invitation_text_html: "запросив(ла) вас приєднатися до своєї групи"
+      link_help: "Натисніть на посилання нижче щоб прийняти запрошення:"
+      accept_invitation: "Прийняти запрошення"
+      stop_emails: "Не отримувати електронні листи від %{site_name}"
+    resend_to_join_group:
+      subject: "%{member} очікує вашого долучення до %{group_name} на %{site_name}"
+    user_added_to_group:
+      subject: "%{who} додав(ла) вас до %{which_group} в %{site_name}"
+      content: "%{who} додав вас до %{which_group}."
+      content_html: "<strong>%{who}</strong> додав вас до <strong>%{which_group}</strong>."
+      link_help: "Натисніть на посилання нижче щоб перейти до групи:"
+    unsubscribe: 'Відпісатися, або змінити Ваші налаштування електронної пошти:'
+    unsubscribe_html: "<a href='%{link_path}'>%{link_text}</a> аби відписатися або змінити налаштування електронної пошти"
+    catch_up:
+      daily_subject: Вчора на %{site_name}
+      weekly_subject: Минулого тижня на %{site_name}
+      do_not_reply: Будь ласка не відповідайте на цей лист
+      mark_as_read: Відмітити як прочитане
+      thanks_for_reading: Дякуємо за читання, гарного дня!
+      marked_as_read_success: Все в листі було позначено як прочитане
+      click_here: Натисніть тут
+    group_membership_approved:
+      intro: "Ваш запит на участь у групі %{group_name} було схвалено."
+      intro_html: "Ваш запит на участь у групі <strong>%{group_name}</strong> було схвалено."
+      link_help: "Натисніть на посилання нижче щоб долучитись до %{group_name} та розпочати:"
+      subject: "Ваш запит на участь у %{group_name} було схвалено"
+      join_group: "Приєднатись до групи"
+    membership_request:
+      intro_html: запросила доступ до однієї з ваших груп.
+      subject: "%{who} зробив запит на приєднання до %{which_group}"
+      view_group: Тут ви можете підтвердити або відхилити запит
+      button_text: Переглянути запит
+  announcement_count_emails: "%{count} листів"
+  email_actions:
+    unfollowed_discussion: Ви вимкнули сповіщення електронною поштою для цієї теми.
+  discussion_mailer:
+    reply_or_view_online_html: "Безпосередньо відповісти на цей лист або <a href='%{url}'>переглянути його на %{hostname}</a>."
+    turn_off_notifications_html: "<a href='%{url}'>Вимкнути листи</a> з цього обговорення."
+    change_email_preferences_html: "Змінити <a href='%{email_preferences_url}'>налашьтування пошти</a>."
+  footer:
+    about: Про Loomio
+    blog: Блог
+    contact: Контакти
+    help: Допомога
+    privacy: Конфіденційність
+    pricing: Ціни
+    public_groups: Публічні групи
+    terms: Умови
+    independent_install_html: '%{hostname} використовує незалежну копію Loomio: <a href="http://github.com/loomio/loomio">дізнатись більше</a>.'
+  password_reset:
+    change_your_password: Змінити пароль
+    change_my_password: Змінити пароль
+    confirm_new_password: Підтвердити пароль
+    new_password: Новий пароль
+    email_guidelines_html: |
+        <p>Введіть адресу електронної пошти щоб отримати посилання для скидання пароля.</p>
+        <p>Якщо ви зазвичай входили через Facebook або Google, введіть адресу електронної пошти, пов'язану з цим обліковим записом.</p>
+    reset_email_timeframe: Надходження листа може зайняти до 5 хвилин. Якщо він не відображається, обов'язково перевірте папку зі спамом.
+    length_restriction: Паролі повинні бути довжиною не менше 8 символів.
+    forbidden_passwords: Прості паролі, такі як "password", заборонені аби тримати ваш обліковий запис у безпеці.
+  introduction_thread:
+    title: Вітаємо! Розкажіть про себе
+    description: |
+        Знайдіть хвилинку, щоб розповісти групі про себе. Додайте коментар нижче.
+
+        Яка ваша роль або наміри участі в цій групі? Що людям поторібно знати про вас, аби зрозуміти звідкіля ви прийшли?
+  how_it_works_thread:
+    title: Як використовувати Loomio
+  task_mailer:
+    task_due_reminder:
+      due_today: 'сьогодні'
+  group_mailer:
+    resend: 'НАГАДУВАННЯ: %{member} очікує вашого долучення до %{group_name}'
+  poll_mailer:
+    common:
+      why_send_this: Ви отримали цей лист, тому що %{reason}
+      view_on_loomio: Переглянути на %{site_name}
+      create_outcome: Поширити рішення
+      your_response: "Ви проголосували:"
+      please_respond: Будь ласка дайте відповідь
+      time_zone: (Час відображається в %{zone})
+      undecided_members: Учасників що не визначились (%{count})
+      undecided_visitors: (%{count}) гостей що не прийняли рішення
+      more_undecided: "%{count} більше..."
+      vote_now: Проголосувати зараз
+      you_have_until: Ви маєте чекати до %{when} для участі.

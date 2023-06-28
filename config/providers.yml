@@ -1,0 +1,9 @@
+# for providers which provide OAuth login capability
+identity:
+  - google
+  - facebook
+  - slack
+  - microsoft
+  - saml
+  - nextcloud
+  - oauth

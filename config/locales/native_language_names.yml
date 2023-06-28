@@ -1,0 +1,61 @@
+en:
+  native_language_name:
+    an: aragonés
+    'be_BY': беларуская мова
+    'bg_BG': български
+    ca: Català
+    cs: čeština
+    'zh_TW': 正體中文
+    da: Dansk
+    de: Deutsch
+    en: English
+    el: ελληνικά
+    eo: Esperanto
+    es: Español
+    fr: Français
+    he: עברית
+    id: Indonesian
+    it: Italiano
+    hu: Magyar
+    ja: 日本語
+    ko: 한국어
+    ml: മലയാളം
+    'nl_NL': Nederlands
+    pl: Polski
+    'pt_BR': Português (Brasil)
+    ro: Română
+    sk: slovenčina
+    sr: Srpski - Latinica
+    'sr_RS': Srpski - Ćirilica
+    sv: Svenska
+    vi: Tiếng Việt
+    tr: Türkçe
+    uk: українська мова
+
+    # aliases
+    be: беларуская мова
+    zh: 正體中文
+    pt: Português (Brasil)
+    'zh_HK': 正體中文
+
+    # experimental
+
+    ar: العربية/عربي
+    cmn: 官話
+    hr: hrvatski
+    it_CH: Italiano (Switzerland)
+    fi: Suomen kieli
+    gl: galego
+    'ga_IE': Gaeilge
+    hi: हिन्दी
+    km: ភាសាខ្មែរ
+    lv: latviešu valoda
+    mk: Македонски јазик
+    mi: Maori
+    'fa_IR': پارسی
+    'pt_PT': Português
+    ru: русский язык
+    sl: slovenski jezik
+    te: తెలుగు
+    ur: اُردُو
+    'ur_PK': اُردُو (Pakistan)

@@ -1,0 +1,94 @@
+da:
+  errors:
+    404:
+      title: Ingen resultater fundet
+  group:
+    stats:
+      members: Medlemmer
+      subgroups: Undergrupper
+      threads: Debatter
+      votes: Stemmer
+      comments: Kommentarer
+      poll_types:
+        proposal: Forslag
+        time: Find et tidspunkt
+  poll:
+    export:
+      title: Titel
+      author: Forfatter
+      email: Email
+      details: Beskrivelse
+      group_name: Gruppenavn
+      reason: Begrundelse
+      total: Total
+  email:
+    reset_password:
+      greeting: |+
+          Hej %{name}
+          Her er et link som du kan bruge til at nulstill din adgangskode for din Loomio konto:
+
+      link_text: Nulstil din adgangskode
+      signoff: |
+          Du modtager denne email fordi din email adresse blev indtastet i "Jeg har glemt min adgangskode"  formular on %{hostname}.
+          Din adgangkode vil først blive ændret når du klikker på linket herover og udfylder formularen.
+          Hvis du stadig har problemer med at logge ind, besvar denne email for at kontakte support.
+    by_who: af %{person}
+    reply_to_this_discussion: Svar på denne diskussion
+    view_group: Vis gruppe
+    to_join_group:
+      invitation_text: "%{member} har inviteret dig til at deltage i deres gruppe %{group_name}."
+      invitation_text_html: "har inviteret dig til at deltage i deres gruppe"
+      link_help: "Klik på linket herunder for at acceptere invitationen:"
+      accept_invitation: "Acceptér invitation"
+    user_added_to_group:
+      content: "%{who} har tilføjet dig til %{which_group}."
+      content_html: "<strong>%{who}</strong> har tilføjet dig til <strong>%{which_group}</strong>."
+      link_help: "Klik på linket herunder for at gå til gruppen:"
+    unsubscribe: 'Afmeld abonnement eller rediger dine e-mail-indstillinger:'
+    unsubscribe_html: "<a href='%{link_path}'>%{link_text}</a> for at afmelde abonnement eller ændre dine e-mail-indstillinger."
+    catch_up:
+      mark_as_read: Marker som læst
+      thanks_for_reading: Tak fordi du læste, hav en god dag!
+      marked_as_read_success: Alt fra e-mailen er blevet markeret som læst
+      click_here: Klik her
+    group_membership_approved:
+      intro: "Din anmodning om at deltage i gruppen %{group_name} er blevet godkendt."
+      intro_html: "Din anmodning om at deltage i gruppen <strong>%{group_name}</strong> er blevet godkendt."
+      link_help: "Klik på linket herunder for at blive medlem af %{group_name}:"
+      join_group: "Bliv medlem"
+    membership_request:
+      intro_html: har anmodet om adgang til en af dine Loomio-grupper.
+      subject: "%{who} har anmodet om medlemskab af %{which_group}"
+      view_group: Du kan godkende eller afvise anmodningen her
+      button_text: Vis anmodning
+  discussion_mailer:
+    reply_or_view_online_html: "Svar på denne e-mail eller <a href='%{url}'>se det på %{hostname}</a>."
+    turn_off_notifications_html: "<a href='%{url}'>Slå email notifikationer fra</a> for denne diskussion."
+  footer:
+    about: Om
+    blog: Blog
+    contact: Kontakt
+    help: Hjælp
+    privacy: Fortrolighed
+    pricing: Priser
+    public_groups: Offentlige grupper
+    terms: Betingelser
+    independent_install_html: '%{hostname} kører en selvstændig kopi af Loomio: <a href="http://github.com/loomio/loomio">se mere her</a>.'
+  password_reset:
+    reset_email_timeframe: Vent venligst i op til 5 minutter på at emailen kommer. Hvis den ikke kommer, så kontroller din spam folder.
+    length_restriction: Adgangskode skal være mindst 8 tegn.
+    forbidden_passwords: Almindelige adgangskoder så som "password" er forbudt for at sikre dun konto.
+  introduction_thread:
+    title: Velkommen, introducér dig selv
+    description: |
+        Brug et øjeblik på at beskrive dig selv, så at gruppen ved hvem du er. Opret en kommentar herunder
+
+        Hvad er din rolle eller tilgang til at deltaget i denne gruppe? Hvad er vigtigt for andre deltagere at vide om dig for at bedre forstå dit perspektiv?
+  how_it_works_thread:
+    title: Sådan bruger du Loomio
+  poll_mailer:
+    common:
+      why_send_this: Du modtager denne email fordi %{reason}
+      create_outcome: Del resultat
+      please_respond: Svar venligst
+      time_zone: (Tider er vist i %{zone})

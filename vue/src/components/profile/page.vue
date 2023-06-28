@@ -1,0 +1,182 @@
+<script lang="coffee">
+import AppConfig      from '@/shared/services/app_config'
+import Session        from '@/shared/services/session'
+import Records        from '@/shared/services/records'
+import EventBus       from '@/shared/services/event_bus'
+import AbilityService from '@/shared/services/ability_service'
+import LmoUrlService  from '@/shared/services/lmo_url_service'
+import openModal      from '@/shared/helpers/open_modal'
+import UserService    from '@/shared/services/user_service'
+import Flash   from '@/shared/services/flash'
+import { includes, uniq, debounce } from 'lodash'
+import {exact} from '@/shared/helpers/format_time'
+
+export default
+  data: ->
+    user: null
+    originalUser: null
+    existingEmails: []
+    currentTime: new Date()
+
+  created: ->
+    setInterval((=> @currentTime = new Date()), 10000)
+    @init()
+    EventBus.$emit 'currentComponent', { titleKey: 'profile_page.edit_profile', page: 'profilePage'}
+    EventBus.$on 'updateProfile', @init
+    EventBus.$on 'signedIn', @init
+
+  beforeDestroy: ->
+    EventBus.$off 'updateProfile', @init
+    EventBus.$off 'signedIn', @init
+
+  computed:
+    showHelpTranslate: -> AppConfig.features.app.help_link
+    availableLocales: -> AppConfig.locales
+    dateTimeFormats: ->
+      observeLocale = @user.selectedLocale # tell vue this matters
+      'iso day_iso abbr day_abbr'.split(' ').map (pref) =>
+        {value: pref, text: exact(@currentTime, @user.timeZone, pref)}
+    actions: -> UserService.actions(Session.user(), @)
+    emailExists: -> includes(@existingEmails, @user.email)
+
+  methods:
+    init: ->
+      return unless Session.isSignedIn()
+      @originalUser = Session.user()
+      @user = @originalUser.clone()
+      Session.updateLocale(@user.locale)
+
+    changePicture: ->
+      openModal
+        component: 'ChangePictureForm'
+
+    changePassword: ->
+      @openChangePasswordModal(@user)
+
+    openDeleteUserModal: ->
+      @isDeleteUserModalOpen = true
+
+    closeDeleteUserModal: ->
+      @isDeleteUserModalOpen = false
+
+    openSendVerificationModal: ->
+      openModal
+        component: 'ConfirmModal'
+        props:
+          confirm:
+            submit: => Records.users.sendMergeVerificationEmail(@user.email)
+            text:
+              title:    'merge_accounts.modal.title'
+              raw_helptext: @$t('merge_accounts.modal.helptext', sourceEmail: @originalUser.email, targetEmail: @user.email)
+              submit:   'merge_accounts.modal.submit'
+              flash:    'merge_accounts.modal.flash'
+
+    checkEmailExistence: debounce ->
+      return if @originalUser.email == @user.email
+      Records.users.checkEmailExistence(@user.email).then (res) =>
+        if res.exists
+          @existingEmails = uniq(@existingEmails.concat([res.email]))
+    , 250
+
+    submit: ->
+      Records.users.updateProfile(@user)
+      .then =>
+        Flash.success 'profile_page.messages.updated'
+        @init()
+      .catch => true
+
+</script>
+<template lang="pug">
+v-main
+  v-container.profile-page.max-width-1024.px-0.px-sm-3
+    loading(v-if='!user')
+    div(v-if='user')
+      v-card
+        submit-overlay(:value='user.processing')
+        //- v-card-title
+        //-   h1.headline(tabindex="-1" v-t="'profile_page.edit_profile'")
+        v-card-text
+          v-layout
+            v-flex.profile-page__details
+              v-layout(:column="$vuetify.breakpoint.xs")
+                v-flex
+                  v-text-field.profile-page__name-input(:label="$t('profile_page.name_label')" required v-model="user.name")
+                  validation-errors(:subject='user', field='name')
+
+                  v-text-field#user-username-field.profile-page__username-input(:label="$t('profile_page.username_label')" required v-model="user.username")
+                  validation-errors(:subject='user', field='username')
+
+                  //- span existingEmails: {{ existingEmails }}
+                  v-text-field#user-email-field.profile-page__email-input(:label="$t('profile_page.email_label')" required v-model='user.email' @keyup="checkEmailExistence")
+                  validation-errors(:subject='user', field='email')
+                  .profile-page__email-taken(v-if="emailExists")
+                    span.email-taken-message(v-t="'merge_accounts.email_taken'")
+                    space
+                    a.email-taken-find-out-more(@click="openSendVerificationModal" v-t="'merge_accounts.find_out_more'")
+
+                .profile-page__avatar.d-flex.flex-column.justify-center.align-center.mx-12(@click="changePicture()")
+                  user-avatar.mb-4(:user='originalUser', :size='192', :no-link="true")
+                  v-btn(color="accent" @click="changePicture" v-t="'profile_page.change_picture_link'")
+
+              lmo-textarea(
+                :model='user'
+                field="shortBio"
+                :label="$t('profile_page.short_bio_label')"
+                :placeholder="$t('profile_page.short_bio_placeholder')")
+              validation-errors(:subject='user', field='shortBio')
+
+              v-text-field#user-location-field.profile-page__location-input(
+                v-model='user.location'
+                :label="$t('profile_page.location_label')"
+                :placeholder="$t('profile_page.location_placeholder')")
+
+              v-select#user-date-time-format-field(
+                :label="$t('profile_page.date_time_pref_label')"
+                :items="dateTimeFormats"
+                v-model="user.dateTimePref")
+              validation-errors(:subject='user', field='dateTimeFormat')
+
+              v-select#user-locale-field(
+                :label="$t('profile_page.locale_label')"
+                :items="availableLocales"
+                v-model="user.selectedLocale"
+                item-text="name"
+                item-value="key")
+              validation-errors(:subject='user', field='selectedLocale')
+              p(v-if='showHelpTranslate')
+                a(v-t="'profile_page.help_translate'" href='https://help.loomio.com/en/user_manual/users/translation/#help-translate-loomio' target='_blank')
+              p
+                span(v-t="'common.time_zone'")
+                space
+                span {{user.timeZone}}
+                space
+                v-tooltip(top)
+                  template(v-slot:activator="{on, attrs}")
+                    v-icon(v-bind="attrs" v-on="on" small) mdi-information-outline
+                  span(v-t="'profile_page.updated_on_sign_in'")
+        v-card-actions.profile-page__update-account
+          help-link(path="en/user_manual/users/user_profile")
+          v-spacer
+          v-btn.profile-page__update-button(
+            color="primary"
+            @click='submit()'
+            :disabled='emailExists'
+            :loading="user.processing"
+          )
+            span(v-t="'profile_page.update_profile'")
+
+      v-card.profile-page-card.mt-4
+        v-list
+          v-list-item(v-for="(action, key) in actions" :key="key" v-if="action.canPerform()" @click="action.perform()" :class="'user-page__' + key")
+            v-list-item-icon
+              v-icon {{action.icon}}
+            v-list-item-title(v-t="action.name")
+
+</template>
+
+<style lang="sass">
+.profile-page__avatar
+  cursor: pointer
+.email-taken-message
+  color: red
+</style>

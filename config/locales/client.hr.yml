@@ -1,0 +1,58 @@
+hr:
+  templates:
+    try_loomio: Isprobaj Loomio
+  subscription_status:
+    members: "Članovi"
+  common:
+    version: Verzija
+    privacy:
+      public: 'Javno'
+    action:
+      clear: Obriši
+  error_page:
+    forbidden: 'Nepostojeća dozvola za izvršenje.'
+  change_volume_form:
+    simple:
+      label: Notifikacije
+      quiet: Ignoriraj
+  inbox:
+    clear: 'Obriši'
+  comment_form:
+    edit_comment: 'Ažuriranje komentara'
+    delete_comment: 'Obriši komentar'
+    confirm_delete_message: 'Jeste li sigurni da želite obrisati komentar?'
+    post_comment: "Komentiraj"
+  notifications:
+    header: "Notifikacije"
+  discussion_form:
+    privacy_label: 'Privatnost'
+  join_group_button:
+    join_group: 'Pridruži se grupi '
+    membership_requested: Članstvo zatraženo
+  membership_request_form:
+    heading: Zahtjev za pridruženjem grupi
+  group_page:
+    members: Članovi
+    options:
+      edit_group: 'Uredi postavke grupe'
+      email_settings: 'Postavke e-maila'
+      leave_group: 'Napusti grupu'
+  group_form:
+    new_group: Nova grupa
+    group_settings: Uredi postavke grupe
+    group_name: Ime grupe
+    profile: Profil
+  membership_requests_page:
+    ignore: Ignoriraj
+  invitation_form:
+    invite_people: 'Pozovi ljude'
+  memberships_page:
+    members: 'Članovi'
+  profile_page:
+    profile: 'Profil'
+  thread_group:
+    aria_label: Ime grupe
+  delete_comment_dialog:
+    title: 'Obriši komentar'
+  members_panel:
+    accepted: 'Članovi'

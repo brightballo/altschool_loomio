@@ -1,0 +1,331 @@
+zh_TW:
+  explore:
+    header: 探索公開群組
+  activerecord:
+    errors:
+      messages:
+        blank: 不能留白
+        invalid: 不是有效的值
+  errors:
+    clear_cache: "偵測到載入問題。按住 shift 並按下重新整理，或是清除您的瀏覽器快取。"
+    400:
+      title: 錯誤的請求
+      body: 抱歉，我們無法理解該請求
+    401:
+      title: 未經授權
+      body: 您無權存取此頁面。您可能需要登入。
+    403:
+      title: 禁止
+      body: 您無權存取此頁面。您可能需要登入。
+    404:
+      title: 找不到
+      body: 抱歉，您要尋找的頁面不存在。您可能輸入了錯誤的地址，或是頁面可能背移動或刪除。
+    410:
+      title: 不見了
+      body: 此頁面已不存在
+    417:
+      title: 瀏覽器不相容
+      body: |
+          請<a href="https://browser-update.org/update.html?force_outdated=true">升級您的瀏覽器</a>以使用 Loomio
+    422:
+      title: 無法處理的實體
+      body: 您想要的變更已被拒絕。也許您在試圖更改您無法存取的東西。
+    429:
+      title: 太多請求
+      body: 抱歉，您已超過此動作每分鐘允許的最大請求數。請稍後再試。
+    500:
+      title: 內部伺服器錯誤
+      body: 我們很抱歉，但似乎出了點問題。我們已收到有關此問題的通知，且很快就會對其進行研究。
+    noscript: Loomio 需要 JavaScript！請在您的瀏覽器中啟用 JavaScript 以繼續
+    upgrade_browser: |
+        喔喔！您的網路瀏覽器太舊了，Loomio 可能無法正常運作。請<a href="https://browser-update.org/update.html">升級您的瀏覽器。</a>
+    return_home: 回到首頁
+    not_found: 404 檔案找不到。
+    messages:
+      email: 您輸入的不是有效的電子郵件地址
+      spoofed_media_type: 檔案內容不符合其檔案名稱
+  group:
+    error:
+      handle_must_begin_with_parent_handle: "必須以 %{parent_handle} 開始。"
+      no_public_trials: "請從試用版升級以變更群組隱私設定"
+    stats:
+      group_stats: 群組統計
+      org_stats: 組織統計（包含子群組）
+      visits: 造訪
+      members: 成員 ({{count}})
+      subgroups: 子群組
+      threads: 討論串
+      polls: 投票
+      votes: 投票
+      comments: 意見
+      general: 一般
+      poll_types:
+        proposal: 提案
+        count: 計數
+        choose: 選擇
+        allocate: 分配
+        score: 分數
+        rank: 排名
+        time: 時間投票
+  user:
+    deleted_user: "已刪除的使用者"
+    placeholder_name: "已邀請的使用者 (%{hostname})"
+    error:
+      sign_in_required_html: |
+          您必須登入以繼續。
+          請<a href="/dashboard" target="_blank">登入</a>然後重新整理此頁面以繼續。
+      recaptcha: "我們無法確認您是不是機器人。請再試一次！"
+      bad_login: "抱歉，這個密碼與我們的檔案上的不一樣"
+      username_must_be_alphanumeric: "使用者名稱只能為小寫字母與數字"
+  poll:
+    error:
+      cannot_add_options: 無法新增選項到此投票
+      cannot_remove_options: 無法從此投票移除選項
+      must_have_options: 必須至少有一個投票選項
+      must_be_in_the_future: 必須在未來
+      templates_cannot_close: 範本無法關閉
+    export:
+      percent_voted: "%{num}/%{denom} (%{percent}) 的成員已經表達了他們的立場"
+      title: 標題
+      author: 作者
+      email: 電子郵件
+      user_id: 使用者 ID
+      created_at: 建立於
+      closing_at: 定案於
+      closed_at: 定案於
+      is_latest: 最新
+      engagement: 激勵
+      stances: 立場
+      participants: 參與者
+      details: 詳細內容
+      group_name: 群組名稱
+      discussion_title: 討論串標題
+      outcome_author: 成果作者
+      outcome_created_at: 成果建立於
+      outcome_statement: 成果陳述
+      poll_url: 投票 URL
+      reason: 理由
+      participant: 參與者
+      also_available: 也提供於
+      total: 總共
+    waiting_for_votes_from: "等待投票來自"
+  stance:
+    error:
+      too_short: 請選擇
+  invitation:
+    invitation_cancelled: 抱歉，這封邀請函已被群組協調者撤銷。請從您的群組中要求另一份邀請函。
+    invitation_already_used: 您已出示過此封邀請函，請直接登入到 Loomio 以進入您的群組。
+  subscriptions:
+    active: 活躍
+    inactive: 不活躍
+  base_mailer:
+    via_loomio: '%{name}（透過 %{site_name}）'
+  user_mailer:
+    group_export_ready:
+      subject: 匯出「%{group_name}」的群組資料
+      body_html: |
+          <a href="%{url}">在此</a>下載您群組的資料。請注意，此連結將會在一週後過期。
+    deactivated:
+      subject: "您的 %{site_name} 使用者帳號已被停用。"
+      body_html: |
+          <p>您或某個可以存取您帳號的人已停用您的 Loomio 使用者帳號。</p>
+          <p>所有個人資料都已從系統移除。</p>
+          <p>如果您想要復原您的使用者帳號與相關的留言與投票，請聯絡客服並參考： %{recovery_code}</p>
+    accounts_merged:
+      subject: "您的 %{site_name} 使用者帳號已經合併。"
+      body_html: |
+          %{name} 您好，
+          您的兩個 Loomio 帳號已經合併為一個。
+          從現在開始，要存取 Loomio，請使用 <strong>%{email}</strong> 登入。
+    merge_verification:
+      subject: "驗證您的 %{site_name} 電子郵件地址以進行合併"
+      body_html: |
+          <p>您好 %{name}，</p>
+          <p>有一個將您的 <strong>%{source_email}</strong> 使用者帳號合併到屬於 <strong>%{target_email}</strong> 帳號的請求。</p>
+          <p>在這個程序完成後，您將無法再使用 <strong>%{source_email}</strong> 登入，僅能使用 <strong>%{target_email}</strong>。</p>
+          <p>請確定這是您想要執行的動作。</p>
+      verify: 驗證電子郵件並繼續
+      confirm_page:
+        confirm: 確認合併
+        body_html: |
+            <p>請確認您想要將 <strong>%{source_email}</strong> 的帳號合併到 <strong>%{target_email}</strong>。</p>
+            <p>您的 <strong>%{source_email}</strong> 將會被刪除，您將只能透過 <strong>%{target_email}</strong> 登入。</p>
+            <p>此變動是不可逆的。</p>
+        merge: 合併帳號
+      complete_page:
+        title: 合併成功！
+        body_html: |
+            <p>您的使用者帳號合併成功。您很快就會在 <strong>%{target_email}</strong> 收到確認信。</p>
+            <p>如果您還有其他問題的話，請<a href="/contact" target="_blank">聯絡我們</a>。</p>
+  email:
+    common:
+      or_enter_code: 或是在下方輸入代碼
+      resend: 這個將會在24小時後過期且僅可使用一次
+    login:
+      subject: 登入到 %{site_name}
+      intro: 這是您用來登入 %{site_name} 的連結
+      intro_code: 這是您用來登入 %{site_name} 的代碼
+      login: 以 %{name} 的身份登入
+    reactivate:
+      subject: 重新啟用您的 %{site_name} 帳號
+      intro: 嗨 %{name}，這是用來重新啟用您的 %{site_name} 帳號的連結
+      login: 重新啟用 %{name}
+    contact_request:
+      subject: "%{name} 想要與您在 %{site_name} 上連線！"
+      intro: "%{name} (%{email}) 已經傳送給您一個連線的請求。"
+      footer: "您可以透過回覆此封電子郵件來直接回應到 %{name}。"
+    reset_password:
+      greeting: |
+          嗨，%{name}
+          這是您用來重設您 Loomio 帳號之密碼的連結：
+      link_text: 重設您的密碼
+      signoff: |
+          因為您的電子郵件在 %{hostname} 上被輸入到「忘記密碼」表單中，所以收到這份訊息。
+          然而，您的密碼在您完成上面這個連結的表單前都不會被變更。
+          若您還有登入上的問題，回覆這封電子郵件以連絡客服人員。
+    by_who: '%{person}'
+    reply_to_this_discussion: 回應此討論串
+    loomio_app_description: "%{site_name} 是協作組織的決策工具"
+    view_group: 檢視群組
+    to_join_group:
+      subject: "%{member} 已邀請您加入在 %{site_name} 上的 %{group_name}"
+      invitation_text: "%{member} 邀請您加入他們的 %{group_name} 群組。"
+      invitation_text_html: "已經邀請您加入他們的群組"
+      link_help: "點選下面的連結以接受邀請："
+      accept_invitation: "接受邀請"
+      stop_emails: "停止從 %{site_name} 收到電子郵件"
+    resend_to_join_group:
+      subject: "%{member} 正等待您加入在 %{site_name} 上的 %{group_name}"
+    user_added_to_group:
+      subject: "%{who} 將您加入至在 %{site_name} 上的 %{which_group}"
+      content: "%{who} 將您加入至 %{which_group}。"
+      content_html: "<strong>%{who}</strong> 將您加入到了 <strong>%{which_group}</strong>。"
+      link_help: "點選以下的連結以前往該群組："
+    unsubscribe: '取消訂閱或者變更您的電子郵件偏好設定：'
+    unsubscribe_html: "<a href='%{link_path}'>%{link_text}</a>取消訂閱或者變更您的電子郵件偏好設定。"
+    catch_up:
+      daily_subject: 昨日 %{site_name}
+      weekly_subject: 上週在 %{site_name}
+      other_subject: 最近於 %{site_name}
+      do_not_reply: 請不要回覆此封電子郵件。
+      mark_as_read: 設為已讀
+      thanks_for_reading: 感謝您的閱讀，祝您有美好的一天！
+      marked_as_read_success: 電子郵件所列的討論串現在設為已讀了
+      click_here: 點這邊
+    group_membership_approved:
+      intro: "您加入「%{group_name}」群組的申請已獲批准。"
+      intro_html: "您加入 <strong>%{group_name}</strong> 群組的申請已獲批准。"
+      link_help: "點選以下的連結以加入 %{group_name} 並開始："
+      subject: "您加入 %{group_name} 群組的申請已獲批准。"
+      join_group: "加入群組"
+    membership_request:
+      intro_html: 申請加入您的其中一個群組。
+      subject: "%{who} 申請加入 %{which_group}"
+      view_group: 您可點此批准或拒絕申請
+      button_text: 檢視申請
+  announcement_count_emails: "%{count} 個電子郵件"
+  email_actions:
+    unfollowed_discussion: 您已經關閉了討論串的電子郵件。
+  discussion_mailer:
+    reply_or_view_online_html: "直接回覆這封電子郵件或<a href='%{url}'>在 %{hostname} 上檢視它</a>。"
+    turn_off_notifications_html: "在這個討論<a href='%{url}'>關閉電子郵件</a>。"
+    change_email_preferences_html: "變更您的<a href='%{email_preferences_url}'>電子郵件偏好設定</a>。"
+    unsubscribe_from_discussion_announced_html: "<a href='%{url}'>取消訂閱</a>此討論串中的未來公告。"
+    unsubscribe_from_new_comment_html: "<a href='%{url}'>取消訂閱</a>此討論串中的留言。"
+    unsubscribe_from_comment_replied_to_html: "這是回覆通知。"
+    unsubscribe_from_user_mentioned_html: "這是提及通知。"
+  footer:
+    about: 關於
+    blog: 部落格
+    contact: 聯絡我們
+    help: 教學文件
+    privacy: 隱私權
+    pricing: 價格
+    public_groups: 公開群組
+    terms: 服務條款
+    independent_install_html: '%{hostname} 運作的是 Loomio 的獨立副本：<a href="http://github.com/loomio/loomio">詳細瞭解</a>。'
+  password_reset:
+    change_your_password: 變更您的密碼
+    change_my_password: 變更密碼
+    confirm_new_password: 確認密碼
+    new_password: 新密碼
+    email_guidelines_html: |
+        <p>輸入您的電子郵件，然後您將會收到密碼重設連結。</p>
+        <p>若您透過 Facebook 或 Googld 登入，請輸入與帳號相關聯的電子郵件。</p>
+    reset_email_timeframe: 這將會花費 5 分鐘的時間將電子郵件寄到。如果沒有出現，請務必檢查您的垃圾信資料夾。
+    length_restriction: 密碼應至少 8 個字元長。
+    forbidden_passwords: 常見的密碼，像是「password」將會被拒絕以保護您的帳號安全。
+  introduction_thread:
+    title: 歡迎！請自我介紹
+    description: |
+        花一點時間讓群組知道您是誰。在下面貼出評論。
+
+        您在此群組中的角色是什麼？夥伴應該知道您從哪裡來嗎？
+  how_it_works_thread:
+    title: 如何使用 Loomio
+    description: |
+        歡迎來到 Loomio，一個線上討論與共同決策的空間。
+
+        這是一個範例**討論串**。您可以在下面新增評論。討論串是用來討論特定主題的地方。這個討論串討論的是關於 Loomio 如何運作，所以在這裡裡貼出關於這個的問題吧。
+
+        您目前正在閱讀討論串**內容**，這是提供背景資訊的空間。您可以隨時更新以協助夥伴了解關鍵資訊與問題。
+
+        要入門 Loomio：
+        <ul>
+        <li>在既有的討論串中留言，或是這個。</li>
+        </ul>
+        在 Loomio 上貼文的秘訣：
+        <ul>
+        <li>要通知特定的人，在他們的名字前輸入 @</li>
+        <li>拖曳圖片與附件或點擊迴紋針圖示</li>
+        <li>看看<a href="https://help.loomio.org/en/guides/5_ways_to_use_threads/" target="_blank">使用討論串的五種方法</a>以獲得一些靈感與祕訣</li>
+        </ul>
+
+        若您有任何問題，請見[Loomio 說明手冊](http://help.loomio.org)。
+  first_proposal:
+    name: 有任何關於使用 Loomio 的問題嗎？
+    description: |
+        _如果是的話，請分享您的問題。如果沒有的話，您已經準備好在您的群組討論串中留言了！_
+
+        這個 **勾選投票** 就是用來問您或任何在這裡的人有沒有任何使用 Loomio 的問題。
+
+        <ul><li>繼續試著使用下面的按鈕與文字欄位。</li></ul>
+
+        與任何決策或簡化工具一樣，您必須在其關閉前做出回應。
+
+        您可以在其仍開放時變更您的立場（也許是回應新資訊）。
+
+        **試著參與！點擊其中一個按鈕。**
+  task_mailer:
+    task_due_reminder:
+      subject: "工作提醒：%{name}"
+      greeting: "嗨 %{name}，以下的工作於 %{due} 到期："
+      view_task: "在 %{site_name} 上檢視"
+      update_or_comment: "如果您已完成此工作，請勾選它。若其不完整，請分享進度更新。"
+      due_today: '今天'
+      due_in_count_days: '%{count} 天內'
+  group_mailer:
+    resend: '提醒：%{member} 正等候您加入 %{group_name}'
+    destroy_warning:
+      subject: 您的 Loomio 群組已安排刪除。
+      body: |
+          您的 Loomio 群組：「%{group}」已被 %{deletor} 安排刪除。
+          若您不希望您的群組被刪除，請回覆此電子郵件。
+          若您確定您想要刪除群組，您就不需要任何做任何事。
+          感謝您。
+  poll_mailer:
+    common:
+      why_send_this: 因為 %{reason}，您收到了這封電子郵件
+      view_on_loomio: 在 %{site_name} 上檢視
+      create_outcome: 分享成果
+      your_response: "您投票給："
+      you_voted: "您已投票！"
+      not_invited: "未邀請"
+      please_respond: 請回應
+      time_zone: （在 %{zone} 顯示的時間）
+      undecided_members: 未決定的成員（%{count}）
+      undecided_visitors: 未決定的來賓 (%{count})
+      more_undecided: "%{count} 更多……"
+      vote_now: 現在投票
+      you_have_until: 您到 %{when} 前都可以參與。
+      people_have_voted: "%{dnom} 中的 %{nom} 個人已投票 (%{pct}%)"
