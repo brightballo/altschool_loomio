@@ -1,0 +1,12 @@
+development:
+  adapter: postgresql
+  database: loomio_development
+  username: <%= ENV['DB_USERNAME'] %>
+  password: <%= ENV['DB_PASSWORD'] %>
+
+test:
+  adapter: postgresql
+  database: loomio_test
+  username: <%= ENV['DB_USERNAME'] %>
+  password: <%= ENV['DB_PASSWORD'] %>
+
