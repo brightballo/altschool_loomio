@@ -1,0 +1,31 @@
+# Description: Grafana application for ArgoCD############################################
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: grafana
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: argocd
+    server: https://kubernetes.default.svc
+  project: default
+  sources:
+  - repoURL: https://github.com/nobleman97/altschool_loomio.git
+    targetRevision: HEAD
+    ref: loomioRepo
+  - repoURL: https://grafana.github.io/helm-charts
+    chart: grafana
+    targetRevision: 6.52.2
+    helm:
+      valueFiles:
+        - $loomioRepo/argo-deployment/values/grafana.yaml         
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - CreateNamespace=true
+
+    ############################## END OF grafana.yaml ####################################

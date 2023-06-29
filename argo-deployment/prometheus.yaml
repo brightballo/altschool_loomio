@@ -1,0 +1,32 @@
+# Description: Prometheus application for ArgoCD############################################
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: prometheus
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: argocd
+    server: https://kubernetes.default.svc
+  project: default
+  sources:
+    - repoURL: https://github.com/nobleman97/altschool_loomio.git
+      targetRevision: HEAD
+      ref: loomioRepo
+    - repoURL: https://prometheus-community.github.io/helm-charts/
+      chart: prometheus
+      targetRevision: 19.7.2
+      helm:
+        valueFiles:
+          - $loomioRepo/argo-deployment/values/prometheus.yaml
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+  
+  progressDeadlineSeconds: 600
+# ############################## END OF prometheus.yaml ####################################

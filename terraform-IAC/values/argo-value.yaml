@@ -1,0 +1,128 @@
+## Globally shared configuration
+global:
+  # -- Common labels for the all resources
+  additionalLabels:
+    app.kubernetes.io/managed-by: "Terraform"
+    # app: argocd
+
+  # Default image used by all components
+  image:
+    # -- If defined, a repository applied to all Argo CD deployments
+    repository: quay.io/argoproj/argocd
+    # -- Overrides the global Argo CD image tag whose default is the chart appVersion
+    tag: "v2.7.4"
+    # -- If defined, a imagePullPolicy applied to all Argo CD deployments
+    imagePullPolicy: IfNotPresent
+
+## Argo Configs
+configs:
+  # General Argo CD configuration
+  ## Ref: https://github.com/argoproj/argo-cd/blob/master/docs/operator-manual/argocd-cm.yaml
+  cm:
+    # -- Create the argocd-cm configmap for [declarative setup]
+    create: true
+
+    # -- Annotations to be added to argocd-cm configmap
+    annotations: {}
+
+    # -- Enable exec feature in Argo UI
+    ## Ref: https://argo-cd.readthedocs.io/en/latest/operator-manual/rbac/#exec-resource
+    exec.enabled: true
+
+    # -- Enable local admin user
+    ## Ref: https://argo-cd.readthedocs.io/en/latest/faq/#how-to-disable-admin-user
+    admin.enabled: true
+
+    # Dex configuration
+
+  # Argo CD RBAC policy configuration
+  ## Ref: https://github.com/argoproj/argo-cd/blob/master/docs/operator-manual/rbac.md
+  rbac:
+    # -- Create the argocd-rbac-cm configmap with ([Argo CD RBAC policy]) definitions.
+    # If false, it is expected the configmap will be created by something else.
+    # Argo CD will not work if there is no configmap created with the name above.
+    create: true
+
+    # -- Annotations to be added to argocd-rbac-cm configmap
+    annotations: {}
+
+    # -- The name of the default role which Argo CD will falls back to, when authorizing API requests (optional).
+    # If omitted or empty, users may be still be able to login, but will see no apps, projects, etc...
+    policy.default: ''
+
+    # -- File containing user-defined policies and role definitions.
+    # @default -- `''` (See [values.yaml])
+    policy.csv: |
+        g, solution_argocd_devops, role:admin
+
+    # Policy rules are in the form:
+    #  p, subject, resource, action, object, effect
+    # Role definitions and bindings are in the form:
+    #  g, subject, inherited-subject
+    # policy.csv |
+    #   p, role:org-admin, applications, *, */*, allow
+    #   p, role:org-admin, clusters, get, *, allow
+    #   p, role:org-admin, repositories, *, *, allow
+    #   p, role:org-admin, logs, get, *, allow
+    #   p, role:org-admin, exec, create, */*, allow
+    #   g, your-github-org:your-team, role:org-admin
+
+    # -- OIDC scopes to examine during rbac enforcement (in addition to `sub` scope).
+    # The scope value can be a string, or a list of strings.
+    scopes: "[groups]"
+
+# This key configures Redis-HA subchart and when enabled (redis-ha.enabled=true)
+# the custom redis deployment is omitted
+# Check the redis-ha chart for more properties
+redis-ha:
+  # -- Enables the Redis HA subchart and disables the custom Redis single node deployment
+  enabled: false  # Consider HA in non dev env, for other ArgoCD components as well: https://github.com/argoproj/argo-helm/tree/main/charts/argo-cd#high-availability
+
+## Server
+server:
+  ## Server service configuration
+  service:
+    type: LoadBalancer
+
+  ingress:
+      # -- Enable an ingress resource for the Argo CD server
+      enabled: true
+      # -- Additional ingress annotations
+      annotations: 
+        cert-manager.io/cluster-issuer: letsencrypt-production
+        nginx.ingress.kubernetes.io/ssl-passthrough: "true"
+        nginx.ingress.kubernetes.io/cors-expose-headers: "*, X-CustomResponseHeader"
+      # -- Additional ingress labels
+      labels: {}
+      # -- Defines which ingress controller will implement the resource
+      ingressClassName: "nginx"
+
+      hosts:
+        - argo.loomio.me
+
+      # -- List of ingress paths
+      paths:
+        - /
+      # -- Ingress path type. One of `Exact`, `Prefix` or `ImplementationSpecific`
+      pathType: Prefix
+      # -- Additional ingress paths
+      extraPaths: []
+        # - path: /*
+        #   pathType: Prefix
+        #   backend:
+        #     service:
+        #       name: ssl-redirect
+        #       port:
+        #         name: use-annotation
+
+      # -- Ingress TLS configuration
+      tls:
+      - hosts:
+        - argo.loomio.me
+        secretName: argocd-secret # do not change, this is provided by Argo CD
+    # https://argo-cd.readthedocs.io/en/stable/operator-manual/ingress/
+
+      # -- Uses `server.service.servicePortHttps` instead `server.service.servicePortHttp`
+      https: false
+      extraArgs:
+      - --insecure

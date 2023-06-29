@@ -1,0 +1,5 @@
+# Description: Prometheus Helm chart values############################################
+server:
+  service:
+    type: LoadBalancer
+# #####################################################################

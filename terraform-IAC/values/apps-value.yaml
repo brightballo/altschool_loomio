@@ -1,0 +1,34 @@
+applications:
+    - name: argo-apps
+      namespace: argocd
+      destination:
+        namespace: argocd
+        server: https://kubernetes.default.svc
+      project: default
+      source:
+        path: argo-deployment
+        repoURL: https://github.com/nobleman97/altschool_loomio.git
+        targetRevision: main
+        directory:
+          recurse: true
+          jsonnet: {}
+      syncPolicy:
+        automated:
+          selfHeal: true
+          prune: true
+
+# -- Deploy Argo CD Projects within this helm release
+# @default -- `[]` (See [values.yaml])
+## Ref: https://github.com/argoproj/argo-cd/blob/master/docs/operator-manual/
+projects: []
+
+# -- Deploy Argo CD ApplicationSets within this helm release
+# @default -- `[]` (See [values.yaml])
+## Ref: https://argo-cd.readthedocs.io/en/stable/operator-manual/applicationset/
+applicationsets: []
+
+# -- Deploy Argo UI Extensions within this helm release
+# @default -- `[]` (See [values.yaml])
+## This function in tech preview stage, do expect unstability or breaking changes in newer versions. Bump image.tag if necessary.
+## Ref: https://github.com/argoproj-labs/argocd-extensions
+extensions: []

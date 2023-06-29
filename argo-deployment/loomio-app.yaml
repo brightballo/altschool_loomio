@@ -1,0 +1,46 @@
+### loomio-app.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: loomio-deployment
+  namespace: argocd
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: loomio
+  template:
+    metadata:
+      labels:
+        app: loomio
+    spec:
+      containers:
+      - name: loomio
+        image: 4568910/loomio_image:v1
+
+        resources:
+          limits:
+            cpu: "1"
+            memory: "1Gi"
+          requests:
+            cpu: "1"
+            memory: "1024Mi"
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: loomio-service
+  namespace: argocd
+
+spec:
+  selector:
+    app: loomio
+  ports:
+  - name: http
+    port: 80
+    targetPort: 80
+  type: LoadBalancer
+
+##### END OF loomio-app.yaml
