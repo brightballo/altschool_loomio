@@ -1,0 +1,58 @@
+name: Terraform
+
+on: 
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'     
+        required: true
+        default: 'warning'
+      tags:
+        description: 'Test scenario tags' 
+
+env:
+  AWS_REGION: ${{ secrets.AWS_REGION }}
+  AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+  AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+jobs:
+  terraform:
+    name: Terraform
+    runs-on: ubuntu-latest
+    environment: production
+
+    defaults:
+      run:
+        shell: bash
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        
+      - name: Connect to EKS
+        shell: bash
+        run: |
+          aws eks --region ${{ secrets.AWS_REGION }} update-kubeconfig --name Altschool-staging
+          mkdir -p $HOME/.kube
+          sudo chown $(id -u):$(id -g) $HOME/.kube/config
+          export KUBE_CONFIG_PATH=~/.kube/config
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v2
+        with:
+          terraform_version: 1.5.1
+
+      - name: Terraform Init
+        run: terraform init
+
+
+      - name: Terraform Plan
+        run: terraform plan -input=false
+
+      - name: Terraform Apply
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        run: terraform apply -auto-approve -input=false
+
+      # - name: Terraform Destroy
+      #   if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+      #   run: terraform destroy -auto-approve -input=false
