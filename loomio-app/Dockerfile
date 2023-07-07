@@ -1,88 +1,58 @@
-FROM ruby:3.2.2
+FROM ubuntu
 
-ENV BUNDLE_BUILD__SASSC=--disable-march-tune-native
-ENV MALLOC_ARENA_MAX=2
-ENV RAILS_LOG_TO_STDOUT=1
-ENV RAILS_SERVE_STATIC_FILES=1
-ENV RAILS_ENV=production
-ENV BUNDLE_WITHOUT=development
-ENV NODE_OPTIONS=--openssl-legacy-provider
+RUN apt-get update && apt-get upgrade -y
 
-RUN apt-get update -qq
-RUN apt-get install --no-install-recommends -y \
-    autoconf \
-    bison \
-    build-essential \
-    curl \
-    cron \
-    ffmpeg \
-    git \
-    imagemagick \
-    libcfitsio-dev \
-    libdb-dev \
-    libexif-dev \
-    libexpat1-dev \
-    libffi-dev \
-    libfftw3-dev \
-    libgdbm-dev \
-    libgdbm6 \
-    libglib2.0-dev \
-    libgmp-dev \
-    libgsf-1-dev \
-    libheif-dev \
-    libimagequant-dev \
-    libjpeg-dev \
-    libmatio-dev \
-    libncurses5-dev \
-    libopenexr-dev \
-    libopenjp2-7-dev \
-    libopenslide-dev \
-    liborc-dev \
-    libpango1.0-dev \
-    libpng-dev \
-    libpoppler-glib-dev \
-    libpq-dev \
-    libreadline6-dev \
-    librsvg2-dev \
-    libssl-dev \
-    libtiff5-dev \
-    libvips \
-    libvips-dev \
-    libwebp-dev \
-    libxml2-dev \
-    libxslt1-dev \
-    libyaml-dev \
-    mupdf \
-    patch \
-    python3 \
-    rustc \
-    sudo \
-    uuid-dev \
-    zlib1g-dev
+RUN apt-get install curl git nodejs npm build-essential \
+                     libssl-dev libreadline-dev zlib1g-dev \
+		     libpq-dev libffi-dev libmagickwand-dev \
+                     imagemagick python3 redis -y
+                     
+RUN apt install rbenv -y
+RUN mkdir -p "$(rbenv root)"/plugins && \
+git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build 
 
-RUN rm -rf /var/lib/apt/lists /var/cache/apt/archives /usr/share/doc /usr/share/man
+RUN cd "$(rbenv root)"/plugins/ruby-build && git pull && apt-get update
+# RUN rbenv install 3.2.2 && gem install bundler
 
-# install node
+RUN apt install ruby-dev -y && gem install bundler
 
-RUN curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
-RUN apt-get -y install nodejs npm
+RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.1/install.sh | bash
 
-WORKDIR /loomio
- 
-COPY Gemfile Gemfile.lock ./
+#RUN source ~/.bashrc
+# RUN echo "source ~/.bashrc" >> ~/.bash_profile
+
+# RUN nvm install 14 && nvm alias default 14
+
+WORKDIR /app
+# RUN git clone https://www.github.com/nobleman97/loomio.git && cd loomio
+
+COPY . /app
+
+RUN sed -i "s/ruby '3.2.2'/ruby '3.0.2'/" Gemfile # && apt install ruby-dev -y
+
 RUN bundle install
- 
-COPY . .
- 
-RUN bundle install
+RUN cd vue; npm install && cd ..
 
-RUN bundle exec bootsnap precompile --gemfile app/ lib/
+COPY ./database.yml ./config/database.yml
 
-WORKDIR /loomio/vue
+RUN apt-get install libvips  libvips-dev -y
+
+# RUN bundle exec rake db:prepare
+
+# RUN rake db:setup
+
+WORKDIR /app/vue
+
 RUN npm install
-RUN npm run build
-WORKDIR /loomio
+
+WORKDIR /app
 
 EXPOSE 3000
 
-CMD /loomio/docker_start.sh
+# Start the Rails server and Vue development server
+#CMD bundle exec rake db:prepare & &&  rake db:setup & && rails s & && cd vue && npm run serve
+
+CMD bundle exec rake db:prepare & \
+    rake db:setup & \
+    rails s & \
+    cd vue && npm run serve
