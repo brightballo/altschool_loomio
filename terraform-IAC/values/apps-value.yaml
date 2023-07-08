@@ -8,7 +8,7 @@ applications:
       source:
         path: argo-deployment
         repoURL: https://github.com/nobleman97/altschool_loomio.git
-        targetRevision: main
+        targetRevision: master
         directory:
           recurse: true
           jsonnet: {}
