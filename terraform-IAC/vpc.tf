@@ -1,36 +1,37 @@
-locals {
-  cluster_name = var.cluster_name
-}
-
+# Description: This file creates the VPC and subnets for the cluster####################
 module "vpc" {
-  source = "terraform-aws-modules/vpc/aws"
+  source  = "terraform-aws-modules/vpc/aws"
+  version = "5.0.0"
 
-  name = "my-eks-vpc"
-  cidr = "10.0.0.0/16"
+  name = local.name
+  cidr = local.vpc_cidr
 
-  azs             = ["us-east-1a", "us-east-1b", "us-east-1c"]
+  azs             = local.azs
   private_subnets = ["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"]
-  public_subnets  = ["10.0.101.0/24", "10.0.102.0/24", "10.0.103.0/24"]
+  public_subnets  = ["10.0.4.0/24", "10.0.5.0/24", "10.0.6.0/24"]
+
+  enable_nat_gateway   = true
+  single_nat_gateway   = var.single_nat_gateway
+  enable_dns_hostnames = true
 
   map_public_ip_on_launch = false
-  enable_dns_hostnames    = true
-
-  enable_nat_gateway = true
-  enable_vpn_gateway = true
 
   public_subnet_tags = {
-    "kubernetes.io/cluster/${local.cluster_name}" = "shared"
-    "kubernetes.io/role/elb"                      = 1
+    "kubernetes.io/cluster/${local.name}" = "shared"
+    "kubernetes.io/role/elb"              = 1
   }
 
   private_subnet_tags = {
-    "kubernetes.io/cluster/${local.cluster_name}" = "shared"
-    "kubernetes.io/role/internal-elb"             = 1
+    "kubernetes.io/cluster/${local.name}" = "shared"
+    "kubernetes.io/role/internal-elb"     = 1
   }
 
-  tags = {
-    Terraform   = "true"
-    Environment = "dev"
-  }
-
+  tags = merge(local.default_tags, {
+    CreatedBy = "capstone-10"
+    Created   = "2023-06-20"
+  })
 }
+
+data "aws_availability_zones" "available" {}
+
+############################################################################################################
