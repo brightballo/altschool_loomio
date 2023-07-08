@@ -7,7 +7,7 @@ applications:
       project: default
       source:
         path: argo-deployment
-        repoURL: https://github.com/nobleman97/altschool_loomio.git
+        repoURL: https://github.com/starburn-hub/altschool_loomio.git
         targetRevision: master
         directory:
           recurse: true
