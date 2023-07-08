@@ -1,20 +1,10 @@
+# Description: Provider configuration for AWS and Kubernetes####################
 provider "aws" {
-  region = "us-east-1"
-}
+  region = var.AWS_REGION
 
-terraform {
-  required_providers {
-    kubectl = {
-      source  = "gavinbunney/kubectl"
-      version = ">= 1.14.0"
-    }
-    helm = {
-      source  = "hashicorp/helm"
-      version = ">= 2.6.0"
-    }
-  }
-
-  required_version = "~> 1.0"
+  # Use this is using custom credentials
+  #   access_key = var.AWS_ACCESS_KEY_ID
+  #   secret_key = var.AWS_SECRET_ACCESS_KEY
 }
 
 provider "kubernetes" {
@@ -28,3 +18,4 @@ provider "kubernetes" {
     args = ["eks", "get-token", "--cluster-name", module.eks.cluster_name]
   }
 }
+############################################################################################################
