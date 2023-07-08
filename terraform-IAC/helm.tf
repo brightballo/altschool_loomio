@@ -1,35 +1,8 @@
-
-# # Create a namespace for argocd
-# resource "helm_release" "argocd" {
-#   name       = "argocd"
-#   repository = "https://argoproj.github.io/argo-helm"
-#   version = "6.0.1"
-#   chart   = "argo-cd"
-
-#   namespace        = "argocd"
-#   create_namespace = true
-
-#   set {
-#     name  = "server.service.type"
-#     value = "LoadBalancer"
-#   }
-#   set {
-#     name  = "global.image.tag"
-#     value = "v2.6.1"
-#   }
-# }
-
-# # use helm provider to install argocd
-# provider "helm" {
-#   kubernetes {
-#     host                   = module.eks.cluster_endpoint
-#     cluster_ca_certificate = base64decode(module.eks.cluster_certificate_authority_data)
-#     # token                  = module.eks.cluster_auth_token
-#   }
-# }
+####################Create ArgoCD Namespace####################
+####################PLEASE MAKE SURE YOUR CLUSTER IS CREATED BEFORE DEPLOYING THIS FILE####################
 
 resource "helm_release" "argocd" {
-  count = local.create_workloads == true ? 1 : 0
+  count = local.create_workloads == true ? 1 : 0 
 
   name       = "argo-cd"
   repository = "https://argoproj.github.io/argo-helm"
@@ -41,9 +14,11 @@ resource "helm_release" "argocd" {
   create_namespace = true
 
   values = [
-    templatefile("values/argocd-values.yaml", { env = var.env })
+    templatefile("values/argo-value.yaml", { env = var.env })
   ]
 }
+
+####################Create ArgoCD Apps####################
 
 resource "helm_release" "argocd_apps" {
   count = local.create_workloads == true ? 1 : 0
@@ -58,10 +33,11 @@ resource "helm_release" "argocd_apps" {
   create_namespace = true
 
   values = [
-    templatefile("values/argocd-apps-values.yaml", { env = var.env })
+    templatefile("values/apps-value.yaml", { env = var.env })
   ]
 
   depends_on = [
     helm_release.argocd
   ]
 }
+####################Create ArgoCD Apps####################
