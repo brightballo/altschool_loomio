@@ -16,15 +16,15 @@ spec:
     spec:
       containers:
       - name: loomio
-        image: 4568910/loomio_image:v1
+        image: 4568910/loomio_image:latest
 
         resources:
           limits:
-            cpu: "1"
-            memory: "1Gi"
+            cpu: "2"
+            memory: "2Gi"
           requests:
-            cpu: "1"
-            memory: "1024Mi"
+            cpu: "2"
+            memory: "2Gi"
         ports:
         - containerPort: 8080
 ---
