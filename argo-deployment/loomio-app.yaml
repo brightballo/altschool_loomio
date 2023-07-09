@@ -40,7 +40,7 @@ spec:
   ports:
   - name: http
     port: 80
-    targetPort: 5000
+    targetPort: 8080
   type: LoadBalancer
 
 ##### END OF loomio-app.yaml
