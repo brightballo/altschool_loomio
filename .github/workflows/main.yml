@@ -32,7 +32,7 @@ jobs:
       - name: Connect to EKS
         shell: bash
         run: |
-          aws eks --region ${{ secrets.AWS_REGION }} update-kubeconfig --name Altschool-staging
+          aws eks --region ${{ secrets.AWS_REGION }} update-kubeconfig --name Altschool-prod
           mkdir -p $HOME/.kube
           sudo chown $(id -u):$(id -g) $HOME/.kube/config
           export KUBE_CONFIG_PATH=~/.kube/config
