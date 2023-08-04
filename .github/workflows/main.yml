@@ -47,11 +47,11 @@ jobs:
 
 
       - name: Terraform Plan
-        run: terraform plan -input=false
+        run: terraform plan -input=false -destroy
 
-      - name: Terraform Apply
-        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-        run: terraform apply -auto-approve -input=false
+#       - name: Terraform Apply
+#         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+#         run: terraform apply -auto-approve -input=false
 
       # - name: Terraform Destroy
       #   if: github.ref == 'refs/heads/main' && github.event_name == 'push'
